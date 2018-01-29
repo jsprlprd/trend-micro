@@ -1,0 +1,121 @@
+---
+
+layout: en-mysupport
+
+meta-title: New Request
+
+pageID: new-request
+
+heading-title: New Request
+heading-title-display: 1
+
+heading-subtitle: Submit any request or inquiry on this page. Fields marked red are required
+
+heading-subtitle-link-text: <i class="fa fa-question-circle"></i>
+heading-subtitle-link-url:
+
+heading-visibility: hidden-xs hidden-sm
+heading-image-visibility: none
+heading-subtitle-top-visibility: none
+
+---
+
+<form class="form-horizontal">
+
+  {% include _en-us/components/new-case/product-profile.html %}
+
+  {% include _en-us/components/new-case/affected-operating-system.html %}
+
+  <hr class="dashed">
+
+  {% include _en-us/components/new-case/issue-type.html %}
+
+  {% include _en-us/components/new-case/issue-category.html %}
+
+  {% include _en-us/components/new-case/virus-pattern-type.html %}
+
+  {% include _en-us/components/new-case/detection-name.html %}
+
+  <hr class="dashed">
+
+  {% include _en-us/components/new-case/subject.html %}
+
+  {% include _en-us/components/new-case/description.html %}
+
+  {% include _en-us/components/new-case/steps-taken.html %}
+
+  {% include _en-us/components/new-case/attachment.html %}
+
+  {% include _en-us/components/new-case/url-reclassification.html %}
+
+  {% include _en-us/components/new-case/case-severity.html %}
+
+  {% include _en-us/components/new-case/case-urgency.html %}
+
+  {% include _en-us/components/new-case/business-impact.html %}
+
+  {% include _en-us/components/new-case/cc-email.html %}
+
+  {% include _en-us/components/new-case/contact-method.html %}
+
+  <hr class="dashed">
+
+  <fieldset class="form-group">
+    <div class="col-xs-offset-0 col-sm-9 col-sm-offset-3">
+      <a href="#request-created-modal" data-toggle="modal" data-target="#request-created-modal" class="btn btn-primary btn-lg btn-block-xs">Submit Request</a>
+      <button type="submit" class="btn btn-link btn-lg btn-block-xs">Cancel</button>
+    </div>
+  </fieldset>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+<!-- Start! Product Profile -->
+{% include _en-us/components/new-case/modal/product-profile.html %}
+<!-- End! Product Profile -->
+
+<!-- Start! Category Description -->
+{% include _en-us/components/new-case/modal/category-description.html %}
+<!-- End! Category Description -->
+
+<!-- Start! URL Reclassification -->
+{% include _en-us/components/new-case/modal/url-reclassification.html %}
+<!-- End! URl Reclassification -->
+
+<!-- Start! Contact List -->
+{% include _en-us/components/new-case/modal/contact-list.html %}
+<!-- End! Contact List -->
+
+
+
+
+
+<!-- Start! Product Profile -->
+<div class="modal fade" id="request-created-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title display-7">Request Sent</h6>
+      </div>
+      <div class="modal-body">
+        <p>
+          A Support Case has been created. The Case Number is <strong>00005451</strong>. You can also view the case in the Support Cases list.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="{{ site.baseurl }}/en-us/business/cases/product-cases.html" class="btn btn-info btn-sm">View Request</a>
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/support-requests.html" class="btn btn-default btn-sm">Go to Support Request</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End! Product Profile -->

@@ -1,0 +1,56 @@
+.portal-access {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: calc(100vh - 255px);
+}
+
+
+
+
+
+/********** Sign In **********/
+
+#sign-in {
+  background-image: none;
+  background-color: #f0f0f0;
+}
+
+#my-support-feature > li {
+  font-size: 17px;
+    padding: 15px 0;
+    padding-left: 45px;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 5px 7.5px;
+}
+#my-support-feature > li > ul {
+  font-size: 14px;
+}
+
+
+#my-support-feature > #support-request {
+	background-image: url(../images/feature-manage-support-request.png);
+}
+
+#my-support-feature > #product-information {
+	background-image: url(../images/feature-provides-relevant-product-information.png);
+}
+
+#my-support-feature > #threat-service {
+	background-image: url(../images/feature-enhanced-threat-service.png);
+}
+
+#my-support-feature > #absolutely-free {
+	background-image: url(../images/feature-absolutely-free.png);
+}
+
+
+
+
+
+
+#account-created .section {
+  margin-left: 60px;
+}

@@ -1,0 +1,43 @@
+<header class="navbar navbar-default navbar-fixed-top">
+
+  <span style="{% if page.url contains '/ja-jp/maintainance.html' %} display: none; {% endif %}">
+    <div id="global-header" class="hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <ul class="nav pull-left">
+            <li><a href="">個人のお客様サポート</a></li>
+            <li><a href="">法人カスタマー＆サポート</a></li>
+            <li><a href="">パートナーポータル</a></li>
+            <li class="active"><a href="{{ site.baseurl }}/ja-jp/business-support.html">プレミアムサポートポータル</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li><a href="">TrendMicro.co.jp</a></li>
+            <li><a href="#select-region" data-toggle="modal" data-targe="#select-region"><i class="fa fa-globe fa-right"></i>日本</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </span>
+
+  <div class="container">
+
+    <button class="navbar-toggle" type="button" id="mobile-slider">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ site.baseurl }}/ja-jp/business-support.html">
+        <img src="{{ site.baseurl }}/assets/images/tm-logo.svg" alt="Trend Micro | Business Support" title="Trend Micro | Business Support" /><span>エンタープライズ<br /> サポート</span>
+      </a>
+    </div>
+
+    <span style="{% if page.url contains '/ja-jp/maintainance.html' %} display: none; {% endif %}">
+      {% include _ja-jp/components/nav/main-navigation.html %}
+    </span>
+  </div>
+
+  <div class="navbar-overlay"></div>
+
+</header>

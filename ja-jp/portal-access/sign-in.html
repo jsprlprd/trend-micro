@@ -1,0 +1,103 @@
+---
+
+layout: jp-portal-access
+
+meta-title: Sign In to MySupport
+
+heading-title: トレンドマイクロ　エンタープライズ<br/>サポートへようこそ
+heading-title-display: 1
+
+heading-visibility: hidden-xs hidden-sm
+heading-image-visibility: none
+heading-subtitle-top-visibility: none
+heading-subtitle-bottom-visibility: none
+heading-subtitle-link-visibility: none
+
+pageID: sign-in
+---
+
+<div class="row">
+
+  <div class="col-md-5 col-md-push-7">
+
+    <form class="form-wrapper" style="margin: 40px 0;">
+
+      <div class="form-heading">
+        <h1 class="form-heading-title display-2">Sign In</h1>
+        <p class="form-heading-subtitle">with your MySupport Account</p>
+      </div>
+
+      <!-- <div class="notification notifcation-danger">
+        <div class="notification-content">
+          <p class="notification-title">Your login attempt failed.</p>
+          <p>Check your email/username format or retype your password. If you forgot your password, <a href="">reset your password online</a>.</p>
+        </div>
+      </div> -->
+
+      <div class="help-block">すでにトレンドマイクロアカウントをお持ちの方はこちら:</div>
+      <div class="form-group form-group-lg has-icon left">
+        <input type="email" class="form-control" placeholder="ログイン用Eメールアドレス" />
+        <i class="fa fa-user form-control-icon"></i>
+      </div>
+      <div class="form-group form-group-lg has-icon left">
+        <input type="password" class="form-control" placeholder="パスワード" />
+        <i class="fa fa-key form-control-icon"></i>
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <label><input type="checkbox">コンピュータにログイン用メールアドレス・パスワードを保存する</label>
+        </div>
+      </div>
+
+      <hr />
+
+      <a href="{{ site.baseurl }}/ja-jp/portal-access/select-account.html" class="btn btn-primary btn-lg btn-block">Sign In</a>
+      <a href="{{ site.baseurl }}/ja-jp/portal-access/forgot-password.html" class="btn btn-link btn-lg btn-block">パスワードをお忘れですか？</a>
+
+    </form>
+
+  </div>
+
+  <div class="col-md-7 col-md-pull-5">
+
+    {% include _ja-jp/components/heading.html %}
+
+    <div class="section">
+      <div class="section-heading">
+        <h2 class="section-title display-6">For Medium &amp; Enterprise Customers</h2>
+      </div>
+      <div class="section-body">
+        <ul class="list" id="my-support-feature">
+          <li id="support-request">新規問い合わせ・問い合わせ履歴確認が行えます</li>
+          <li id="product-information">製品・脅威に関する情報を提供します</li>
+          <!-- <li id="threat-service">
+            Enhanced Threat Service Offering:
+            <ul class="list list-bullet list-nospace">
+              <li>File Analysis</li>
+              <li>URL Reclassification</li>
+              <li>SPAM Submissions</li>
+            </ul>
+          </li> -->
+          <!-- <li id="absolutely-free">Absolutely Free</li> -->
+        </ul>
+        <!-- <a href="{{ site.baseurl }}/ja-jp/portal-access/create-account.html" class="btn btn-info btn-lg">Create MySupport Account</a> -->
+      </div>
+    </div>
+
+    <!-- <hr /> -->
+
+    <!-- <div class="section">
+      <div class="section-heading">
+        <h2 class="section-title display-6">For the following customers, please click below to create a case:</h2>
+      </div>
+      <div class="section-body">
+        <ul class="list list-icon list-icon-red icon-angle-right">
+          <li><a href="{{ site.baseurl }}/ja-jp/portal-access/create-account-type.html">Worry Free Business and Hosted Email Security Customers</a></li>
+          <li><a href="{{ site.baseurl }}/ja-jp/portal-access/create-account-type.html">Partners and Distributors</a></li>
+        </ul>
+      </div>
+    </div> -->
+
+  </div>
+
+</div>

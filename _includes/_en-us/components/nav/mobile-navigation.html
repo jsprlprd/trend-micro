@@ -1,0 +1,100 @@
+<div class="scrollable" id="global-slider">
+  <button class="close" id="close-slider" type="button">&times;</button>
+  <div id="user-profile">
+    <div class="user-avatar"><img src="{{ site.baseurl }}/assets/images/avatar.png"></div>
+    <div class="user-details">
+      <div class="user-name">Jasper Lepardo</div>
+      <div class="user-company">Trend Micro Incorporated A</div>
+    </div>
+  </div>
+  <div class="my-account" id="user-menu"><i class="fa fa-user fa-right"></i>My Account<i class="fa fa-caret-down fa-left"></i></div>
+  <nav class="user-menu">
+    <ul class="nav nav-stacked">
+      <li class="nav-header">My Account</li>
+      <li class="{% if page.url == '/en-us/business/mysupport/my-profile.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/my-profile.html">My Profile</a>
+      </li>
+      <li class="{% if page.url == '/en-us/business/mysupport/my-products-and-services.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/my-products-and-services.html">My Products &amp; Services</a>
+      </li>
+      <li class="{% if page.url == '/en-us/business/mysupport/my-contacts.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/my-contacts.html">My Contacts</a>
+      </li>
+      <hr style="margin: 16px -8px;">
+      <li class="{% if page.url == '/en-us/business/user-guide/' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/user-guide/">User Guide</a>
+      </li>
+    </ul>
+    <hr style="margin: 16px -8px;">
+    <ul class="nav nav-stacked">
+      <li class="{% if page.url == '/en-us/business/portal-access/select-account.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/portal-access/select-account.html">Select Account</a>
+      </li>
+      <li>
+        <a href="{{ site.baseurl }}/en-us/business/">Logout<i class="fa fa-sign-out fa-left"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="slider-menu">
+    <ul class="nav nav-stacked" id="my-support">
+      <li class="nav-header">My Support</li>
+      <li class="{% if page.url == '/en-us/business/mysupport/dashboard.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/dashboard.html">Dashboard</a>
+      </li>
+      <li class="{% if page.url == '/en-us/business/mysupport/new-request.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/new-request.html">New Request</a>
+      </li>
+      <li class="{% if page.url == '/en-us/business/mysupport/support-requests/' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/support-requests/">Support Request</a>
+      </li>
+      <li class="{% if page.url == '/en-us/business/mysupport/diagnostic-tools.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/diagnostic-tools.html">Diagnostic Tools</a>
+      </li>
+      <li class="{% if page.url == '/en-us/business/mysupport/announcements.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/mysupport/announcements.html">Announcements</a>
+      </li>
+      <li class="nav-divider"></li>
+    </ul>
+    <hr style="margin: 16px -8px;">
+
+    <ul class="nav nav-stacked" id="business-support">
+      <li class="nav-header">Business Support</li>
+      <li class=" {% if
+          page.url contains '/en-us/business/technical-support.html' or
+          page.url contains '/en-us/business/product-support/office-scan.html' or
+          page.url contains '/en-us/business/product-support/deep-security.html'
+        %}
+        active
+        {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/technical-support.html">Technical Support<i class="fa fa-caret-down fa-left hidden-xs hidden-sm"></i></a>
+      </li>
+      <li class="{% if page.url == '/en-us/business/virus-and-threat-help.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/en-us/business/virus-and-threat-help.html">Virus &amp; Threat Help</a>
+      </li>
+      <li class="{% if page.url == '/en-us/business/renewals-and-registration.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/en-us/business/renewals-and-registration.html">Renewals &amp; Registration</a>
+      </li>
+      <li class="{% if
+          page.url contains '/en-us/business/contact-support/asia-pacific' or
+          page.url contains '/en-us/business/contact-support/europe' or
+          page.url contains '/en-us/business/contact-support/latin-america' or
+          page.url contains '/en-us/business/contact-support/middle-east-and-africa' or
+          page.url contains '/en-us/business/contact-support/north-amercica'
+        %}
+        active
+        {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/contact-support/asia-pacific.html">Contact Support</a>
+      </li>
+    </ul>
+    <hr style="margin: 16px -8px;">
+    <ul class="nav nav-tabs nav-stacked nav-sm">
+      <li class="nav-header">Trend Micro Support</li>
+      <li><a href="">Home &amp; Home Office Support</a></li>
+      <li><a href="{{ site.baseurl }}/en-us/business/" target="_blank">Business Support</a></li>
+      <li><a href="">Partner Portal</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="slider-overlay"></div>

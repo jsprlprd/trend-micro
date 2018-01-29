@@ -1,0 +1,101 @@
+<div class="scrollable" id="global-slider">
+  <button class="close" id="close-slider" type="button">&times;</button>
+  <div id="user-profile">
+    <div class="user-avatar"><img src="{{ site.baseurl }}/assets/images/avatar.png"></div>
+    <div class="user-details">
+      <div class="user-name">Jasper Lepardo</div>
+      <div class="user-company">Trend Micro Incorporated A</div>
+    </div>
+  </div>
+  <div class="my-account" id="user-menu"><i class="fa fa-user fa-right"></i>マイアカウント<i class="fa fa-caret-down fa-left"></i></div>
+  <nav class="user-menu">
+    <ul class="nav nav-stacked">
+      <li class="nav-header">マイアカウント</li>
+      <li class="{% if page.url == '/ja-jp/mysupport/my-profile.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/mysupport/my-profile.html">マイプロフィール</a>
+      </li>
+      <li class="{% if page.url == '/ja-jp/mysupport/my-products-and-services.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/mysupport/my-products-and-services.html">契約サービス確認・製品情報</a>
+      </li>
+      <li class="{% if page.url == '/ja-jp/mysupport/my-contacts.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/mysupport/my-contacts.html">コンタクト情報</a>
+      </li>
+      <hr style="margin: 16px -8px;">
+      <li class="{% if page.url == '/ja-jp/user-guide/' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/user-guide/">ユーザーガイド</a>
+      </li>
+    </ul>
+    <hr style="margin: 16px -8px;">
+    <ul class="nav nav-stacked">
+      <li class="{% if page.url == '/ja-jp/portal-access/select-account.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/portal-access/select-account.html">アカウントを選択します</a>
+      </li>
+      <li>
+        <a href="{{ site.baseurl }}/ja-jp/business-support.html">ログアウト<i class="fa fa-sign-out fa-left"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="slider-menu">
+    <ul class="nav nav-stacked" id="my-support">
+      <li class="nav-header">マイサポート</li>
+      <li class="{% if page.url == '/ja-jp/mysupport/dashboard.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/mysupport/dashboard.html">ホーム</a>
+      </li>
+      <li class="{% if page.url == '/ja-jp/mysupport/new-request.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/mysupport/new-request.html"><i class="fa fa-pencil-square-o fa-right"></i>問い合わせ</a>
+      </li>
+      <li class="{% if page.url == '/ja-jp/mysupport/support-requests.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/mysupport/support-requests.html">問い合わせ履歴</a>
+      </li>
+      <li class="{% if page.url == '/ja-jp/mysupport/diagnostic-tools.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/mysupport/diagnostic-tools.html">お役立ちツール・リンク</a>
+      </li>
+      <li class="{% if page.url == '/ja-jp/mysupport/announcements.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/mysupport/announcements.html">お知らせ</a>
+      </li>
+      <li class="nav-divider"></li>
+    </ul>
+    <hr style="margin: 16px -8px;">
+
+    <ul class="nav nav-stacked" id="business-support">
+      <li class="nav-header">エンタープライズ サポート</li>
+      <li class=" {% if
+          page.url contains '/ja-jp/esupport/technical-support.html' or
+          page.url contains '/ja-jp/product-support/office-scan.html' or
+          page.url contains '/ja-jp/product-support/deep-security.html'
+        %}
+        active
+        {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/esupport/technical-support.html">製品別サポート<i class="fa fa-caret-down fa-left hidden-xs hidden-sm"></i></a>
+      </li>
+      <li class="{% if page.url == '/ja-jp/esupport/virus-and-threat-help.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/ja-jp/esupport/virus-and-threat-help.html">ウイルスサポートウェブ</a>
+      </li>
+      <li class="{% if page.url == '/ja-jp/esupport/renewals-and-registration.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/ja-jp/esupport/renewals-and-registration.html">契約更新手続き</a>
+      </li>
+      <li class="{% if
+          page.url contains '/ja-jp/contact-support/asia-pacific' or
+          page.url contains '/ja-jp/contact-support/europe' or
+          page.url contains '/ja-jp/contact-support/latin-america' or
+          page.url contains '/ja-jp/contact-support/middle-east-and-africa' or
+          page.url contains '/ja-jp/contact-support/north-amercica'
+        %}
+        active
+        {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/contact-support/asia-pacific.html">技術問い合わせ窓口一覧</a>
+      </li>
+    </ul>
+    <hr style="margin: 16px -8px;">
+    <ul class="nav nav-tabs nav-stacked nav-sm">
+      <li class="nav-header">Trend Micro Support</li>
+      <li><a href="">個人のお客様サポート</a></li>
+      <li><a href="">法人カスタマー＆サポート</a></li>
+      <li><a href="">パートナーポータル</a></li>
+      <li class="active"><a href="{{ site.baseurl }}/ja-jp/business-support.html">プレミアムサポートポータル</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="slider-overlay"></div>

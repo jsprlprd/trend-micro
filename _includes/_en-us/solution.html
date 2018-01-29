@@ -1,0 +1,79 @@
+<div class="row">
+
+  <div class="col-md-9">
+
+    <div class="article">
+      <div class="article-heading">
+        <h2 class="article-title">Summary</h2>
+      </div>
+      <div class="article-body">
+        {{ solution-summary }}
+      </div>
+    </div>
+
+    <div class="article">
+      <div class="article-heading">
+        <h2 class="article-title">Details</h2>
+      </div>
+
+      <div class="article-body">
+        {{ solution-details }}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <table class="table">
+        <tbody>
+          <tr class="active">
+            <td>
+              <div class="small text-muted">Rating:</div>
+              <div>{{ page.solutionRating }} found this helpful</div>
+            </td>
+          </tr>
+          <tr class="active">
+            <td>
+              <div class="small text-muted">Category:</div>
+              <div>{{ page.solutionCategory }}</div>
+            </td>
+          </tr>
+          <tr class="active">
+            <td>
+              <div class="small text-muted">Solution ID:</div>
+              <div>{{ page.solutionID }}</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-9">
+
+    <div class="article">
+      <div class="article-heading">
+        <h2 class="article-title">Feedback</h2>
+      </div>
+      <div class="article-body">
+        <span class="text-17">
+          Did this article help you?
+        </span>
+        <button class="btn btn-positive"><i class="fa fa-thumbs-o-up fa-right"></i>Yes</button>
+        <button class="btn btn-negative"><i class="fa fa-thumbs-o-down fa-right"></i>No</button>
+      </div>
+    </div>
+
+    <div class="article">
+      <div class="article-heading">
+        <h2 class="article-title">Related Articles</h2>
+      </div>
+      <div class="article-body">
+        {{ solution-related-articles }}
+      </div>
+    </div>
+
+  </div>
+
+</div>

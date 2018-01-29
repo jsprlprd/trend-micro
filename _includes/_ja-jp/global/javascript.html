@@ -1,0 +1,125 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script src="{{ site.baseurl }}/assets/js/bootstrap.js"></script>
+<script src="{{ site.baseurl }}/assets/js/functions.js"></script>
+<script src="{{ site.baseurl }}/assets/js/scroll.js"></script>
+<script src="{{ site.baseurl }}/assets/js/time-ago.js"></script>
+
+
+
+
+
+<!-- Custom Plugins -->
+
+<script src="{{ site.baseurl }}/assets/plugins/mouse-wheel/mousewheel.js"></script>
+
+<script>
+  $( '.scrollable' ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
+      var e0 = e.originalEvent,
+          delta = e0.wheelDelta || -e0.detail;
+
+      this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+      e.preventDefault();
+  });
+</script>
+
+
+
+
+
+<script src="{{ site.baseurl }}/assets/plugins/bootstrap-responsive-tabs/js/responsive-tabs.js"></script>
+
+<script>
+
+  $(document).ready(function() {
+      fakewaffle.responsiveTabs(['xs', 'sm']);
+      console.log('responsiveTabs');
+  });
+
+</script>
+
+<script src="{{ site.baseurl }}/assets/plugins/bootstrap-responsive-pills/js/responsive-pills.js"></script>
+
+<script>
+
+  $(document).ready(function() {
+      fakewaffle.responsivePills(['xs', 'sm']);
+      console.log('responsivePills');
+  });
+
+</script>
+
+
+
+
+
+<script src="{{ site.baseurl }}/assets/plugins/bootstrap-select/bootstrap-select.js"></script>
+
+<script>
+
+  $('#global-search .selectpicker, #custom-search .selectpicker').selectpicker({
+    style: 'btn-default',
+    size: 34
+  });
+
+</script>
+
+
+
+
+
+<script>
+
+  $("#show-europe").click(function() { 
+    $("#all-region").hide();
+    $("#europe-country").show("slide", {  direction: "right" } , 350);
+  });
+
+  $(".back-to-region").click(function() { 
+    $("#all-region").show("slide", {  direction: "left"  }, 350);
+    $("#europe-country").hide();
+  });
+
+</script>
+
+
+
+
+
+<script>
+
+  $("#show-asia-pacific").click(function() { 
+    $("#all-region").hide();
+    $("#asia-pacific-country").show("slide", {  direction: "right" } , 350);
+  });
+
+  $(".back-to-region").click(function() { 
+    $("#all-region").show("slide", {  direction: "left"  }, 350);
+    $("#asia-pacific-country").hide();
+  });
+
+</script>
+
+
+
+
+
+<!-- <script>
+
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top - 145
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+
+</script> -->

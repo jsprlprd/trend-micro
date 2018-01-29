@@ -1,0 +1,28 @@
+<nav class="hidden-xs hidden-sm fixed-down" id="sub-navigation">
+
+  <ul class="nav nav-sm">
+    <li class="{% if page.url == '/ja-jp/mysupport/dashboard.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/ja-jp/mysupport/dashboard.html">ホーム</a>
+    </li>
+    <li class="{% if page.url == '/ja-jp/mysupport/new-request.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/ja-jp/mysupport/new-request.html">問い合わせ</a>
+    </li>
+    <li class="{% if
+        page.url contains '/ja-jp/mysupport/support-requests.html' or
+        page.url contains '/ja-jp/cases/product-cases.html' or
+        page.url contains '/ja-jp/cases/threat-cases.html' or
+        page.url contains '/ja-jp/cases/url-cases.html'
+      %}
+      active
+      {% endif %}">
+      <a href="{{ site.baseurl }}/ja-jp/mysupport/support-requests.html">問い合わせ履歴</a>
+    </li>
+    <li class="{% if page.url == '/ja-jp/mysupport/diagnostic-tools.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/ja-jp/mysupport/diagnostic-tools.html">お役立ちツール・リンク</a>
+    </li>
+    <li class="{% if page.url == '/ja-jp/mysupport/announcements.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/ja-jp/mysupport/announcements.html">お知らせ</a>
+    </li>
+  </ul>
+
+</nav>

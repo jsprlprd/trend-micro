@@ -1,0 +1,317 @@
+<div class="modal fade" id="product-profile-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title display-7">Quick Update/Add Product Profile</h6>
+        <p class="modal-subtitle">Please ensure the product information are updated. If not, you may edit the fields here.</p>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <p><strong>Step 1: Select a product profile to edit, or add a new one</strong></p>
+
+          <div class="well well-default">
+            <div class="form-group">
+              <label class="control-label">Product Profile:</label>
+              <div class="row">
+                <div class="col-md-8">
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="Premium Support - Diamond">Premium Support - Diamond</option>
+                    <option value="Premium Support - Gold">Premium Support - Gold</option>
+                    <option value="Premium Support - Silver">Premium Support - Silver</option>
+                    <option value="Professional Support Service - Deep Security">Professional Support Service - Deep Security</option>
+                    <option value="Technical Account Management Services - Diamond">Technical Account Management Services - Diamond</option>
+                    <option value="TPS for ENT Content Security Diamond Add-On">TPS for ENT Content Security Diamond Add-On</option>
+                    <option value="TPS for ENT Content Security Diamond Base">TPS for ENT Content Security Diamond Base</option>
+                    <option value="TPS for ENT Content Security Gold Add-On">TPS for ENT Content Security Gold Add-On</option>
+                    <option value="TPS for ENT Content Security Gold Base">TPS for ENT Content Security Gold Base</option>
+                    <option value="TPS for ENT Content Security Silver Add-On">TPS for ENT Content Security Silver Add-On</option>
+                    <option value="TPS for ENT Content Security Silver Base">TPS for ENT Content Security Silver Base</option>
+                    <option value="TPS for ENT Server Security Gold Add-On">TPS for ENT Server Security Gold Add-On</option>
+                    <option value="TPS for ENT Server Security Gold Base">TPS for ENT Server Security Gold Base</option>
+                    <option value="TPS for ENT Server Security Silver Add-On">TPS for ENT Server Security Silver Add-On</option>
+                    <option value="TPS for ENT Server Security Silver Base">TPS for ENT Server Security Silver Base</option>
+                    <option value="TPS for ENT Threat Management Diamond Base">TPS for ENT Threat Management Diamond Base</option>
+                    <option value="TPS for ENT Threat Management Gold Add-On">TPS for ENT Threat Management Gold Add-On</option>
+                    <option value="TPS for ENT Threat Management Gold Base">TPS for ENT Threat Management Gold Base</option>
+                    <option value="TPS for ENT Threat Management Silver Add-On">TPS for ENT Threat Management Silver Add-On</option>
+                    <option value="TPS for ENT Threat Management Silver Base">TPS for ENT Threat Management Silver Base</option>
+                    <option value="TPS for Partner Content Security Diamond Base">TPS for Partner Content Security Diamond Base</option>
+                    <option value="TPS for Partner Content Security Gold Base">TPS for Partner Content Security Gold Base</option>
+                    <option value="TPS for Partner Content Security Silver Base">TPS for Partner Content Security Silver Base</option>
+                    <option value="TPS for Partner Server Security Gold Add-On">TPS for Partner Server Security Gold Add-On</option>
+                    <option value="TPS for Partner Server Security Gold Base">TPS for Partner Server Security Gold Base</option>
+                    <option value="TPS for Partner Server Security Silver Base">TPS for Partner Server Security Silver Base</option>
+                    <option value="TPS for Partner Threat Management Gold Base">TPS for Partner Threat Management Gold Base</option>
+                    <option value="TPS for Partner Threat Management Silver Base">TPS for Partner Threat Management Silver Base</option>
+                    <option value="Trend Micro Availability Service">Trend Micro Availability Service</option>
+                    <option value="Trend Micro Availability Service Lite 24">Trend Micro Availability Service Lite 24</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <a href="" class="btn btn-link btn-block" id="add-new-product-profile"><i class="fa fa-plus fa-right"></i>Add a New Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="product-profile-details">
+            <p><strong>Step 2: Edit the information for the selected or new product profile</strong></p>
+
+            <div class="well well-default">
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label class="control-label">Profile Name:</label>
+                  <input type="text" class="form-control" placeholder="Profile Name" />
+                </div>
+
+                <div class="form-group col-md-6 pull-right">
+                  <label class="control-label">Operating System <small>(Select all appropriate)</small>:</label>
+                  <textarea class="form-control" style="height: 192px;"></textarea>
+                  <!-- <select class="form-control chosen-select" multiple>
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="Windows 2003 32-Bit">Windows 2003 32-Bit</option>
+                    <option value="Windows 2003 64-Bit">Windows 2003 64-Bit</option>
+                    <option value="Windows 2008 32-Bit">Windows 2008 32-Bit</option>
+                    <option value="Windows 2008 64-Bit">Windows 2008 64-Bit</option>
+                    <option value="Windows Server 2012 64-Bit">Windows Server 2012 64-Bit</option>
+                    <option value="Windows 2003 32-Bit">Windows 2003 32-Bit</option>
+                    <option value="Windows 2003 64-Bit">Windows 2003 64-Bit</option>
+                    <option value="Windows 2008 32-Bit">Windows 2008 32-Bit</option>
+                    <option value="Windows 2008 64-Bit">Windows 2008 64-Bit</option>
+                    <option value="Windows Server 2012 64-Bit">Windows Server 2012 64-Bit</option>
+                  </select> -->
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="control-label">Product:</label>
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <optgroup label="Account Product Assets">
+                      <option value="Cloud App Security">Cloud App Security</option>
+                      <option value="Control Manager">Control Manager</option>
+                      <option value="Deep Security As A Service">Deep Security As A Service</option>
+                      <option value="Endpoint Application Control">Endpoint Application Control</option>
+                      <option value="Endpoint Encryption">Endpoint Encryption</option>
+                      <option value="Endpoint Security Platform">Endpoint Security Platform</option>
+                      <option value="Hosted Email Security">Hosted Email Security</option>
+                      <option value="Hosted Email Security">Hosted Email Security</option>
+                      <option value="Instant Messaging Security">Instant Messaging Security</option>
+                      <option value="Interscan Messaging Security">Interscan Messaging Security</option>
+                      <option value="Interscan Web Security As A Service">Interscan Web Security As A Service</option>
+                      <option value="Interscan Web Security Virtual Appliance">Interscan Web Security Virtual Appliance</option>
+                      <option value="Mobile Security For Enterprise">Mobile Security For Enterprise</option>
+                      <option value="OfficeScan">OfficeScan</option>
+                      <option value="Officescan Plug-In - Data Protection">Officescan Plug-In - Data Protection</option>
+                      <option value="Portalprotect">Portalprotect</option>
+                      <option value="Scanmail For Exchange">Scanmail For Exchange</option>
+                      <option value="Scanmail For Ibm Domino">Scanmail For Ibm Domino</option>
+                      <option value="Scanmail For Lotus Domino">Scanmail For Lotus Domino</option>
+                      <option value="Security For Macintosh">Security For Macintosh</option>
+                      <option value="ServerProtect">ServerProtect</option>
+                      <option value="ServerProtect For Linux">ServerProtect For Linux</option>
+                      <option value="Smart Protection Complete">Smart Protection Complete</option>
+                      <option value="Smart Protection For Endpoints">Smart Protection For Endpoints</option>
+                      <option value="Support Entitlements">Support Entitlements</option>
+                      <option value="Tm_Unmapped_Gic_Product_Id">Tm_Unmapped_Gic_Product_Id</option>
+                      <option value="Virtual Desktop Infrastructure">Virtual Desktop Infrastructure</option>
+                      <option value="Vulnerability Protection">Vulnerability Protection</option>
+                      <option value="Worry-Free Business Security Advanced">Worry-Free Business Security Advanced</option>
+                      <option value="Worry-Free Business Security Services">Worry-Free Business Security Services</option>
+                      <option value="Worry-Free Business Security Standard">Worry-Free Business Security Standard</option>
+                    </optgroup>
+                    <optgroup label="Other Products">
+                      <option value="ARM For Interscan Web Security">ARM For Interscan Web Security</option>
+                      <option value="Cisco CSC Security Services Module">Cisco CSC Security Services Module</option>
+                      <option value="Cisco Protectlink">Cisco Protectlink</option>
+                      <option value="Client Licensing Platform">Client Licensing Platform</option>
+                      <option value="Cloud App Security For Office 365">Cloud App Security For Office 365</option>
+                      <option value="Cloud Application Control">Cloud Application Control</option>
+                      <option value="Cloud Edge">Cloud Edge</option>
+                      <option value="Control Manager">Control Manager</option>
+                      <option value="Control Manager As A Service">Control Manager As A Service</option>
+                      <option value="Core Protection Module - ESP">Core Protection Module - ESP</option>
+                      <option value="Core Protection Module For MAC">Core Protection Module For MAC</option>
+                      <option value="Damage Cleanup Services">Damage Cleanup Services</option>
+                      <option value="Data Loss Prevention Endpoint">Data Loss Prevention Endpoint</option>
+                      <option value="Data Loss Prevention Network Monitor">Data Loss Prevention Network Monitor</option>
+                      <option value="Deep Discovery Advisor">Deep Discovery Advisor</option>
+                      <option value="Deep Discovery Analyzer">Deep Discovery Analyzer</option>
+                      <option value="Deep Discovery App for Splunk">Deep Discovery App for Splunk</option>
+                      <option value="Deep Discovery Email Inspector">Deep Discovery Email Inspector</option>
+                      <option value="Deep Discovery Endpoint Sensor">Deep Discovery Endpoint Sensor</option>
+                      <option value="Deep Discovery Inspector">Deep Discovery Inspector</option>
+                      <option value="Deep Edge">Deep Edge</option>
+                      <option value="Deep Security">Deep Security</option>
+                      <option value="Deep Security As A Service">Deep Security As A Service</option>
+                      <option value="Deep Security For Web Apps">Deep Security For Web Apps</option>
+                      <option value="Email Encryption Gateway">Email Encryption Gateway</option>
+                      <option value="Email Encryption Hosted">Email Encryption Hosted</option>
+                      <option value="Email Reputation Services">Email Reputation Services</option>
+                      <option value="EMSP-SP White Label">EMSP-SP White Label</option>
+                      <option value="Encryption For Email">Encryption For Email</option>
+                      <option value="Endpoint Application Control">Endpoint Application Control</option>
+                      <option value="Endpoint Application Control">Endpoint Application Control</option>
+                      <option value="Endpoint Encryption">Endpoint Encryption</option>
+                      <option value="Endpoint Encryption - Data Armor">Endpoint Encryption - Data Armor</option>
+                      <option value="Endpoint Encryption - Key Armor">Endpoint Encryption - Key Armor</option>
+                      <option value="Endpoint Security Platform">Endpoint Security Platform</option>
+                      <option value="Generic Product">Generic Product</option>
+                      <option value="Highly Scalable Anti-Spam Solution">Highly Scalable Anti-Spam Solution</option>
+                      <option value="Hosted Email Security">Hosted Email Security</option>
+                      <option value="Hosted Email Security">Hosted Email Security</option>
+                      <option value="Hosted Mobile Security">Hosted Mobile Security</option>
+                      <option value="Housecall">Housecall</option>
+                      <option value="Housecall Hosted Edition">Housecall Hosted Edition</option>
+                      <option value="IMSVA">IMSVA</option>
+                      <option value="Information Center">Information Center</option>
+                      <option value="Instant Messaging Security">Instant Messaging Security</option>
+                      <option value="Interscan Antivirus For Sendmail">Interscan Antivirus For Sendmail</option>
+                      <option value="Interscan Gateway Security Appliance">Interscan Gateway Security Appliance</option>
+                      <option value="Interscan Messaging Security">Interscan Messaging Security</option>
+                      <option value="Interscan Messaging Security Appliance">Interscan Messaging Security Appliance</option>
+                      <option value="Interscan Viruswall Standard Edition">Interscan Viruswall Standard Edition</option>
+                      <option value="Interscan Web Manager">Interscan Web Manager</option>
+                      <option value="Interscan Web Manager Lite">Interscan Web Manager Lite</option>
+                      <option value="Interscan Web Security As A Service">Interscan Web Security As A Service</option>
+                      <option value="Interscan Web Security Hybrid">Interscan Web Security Hybrid</option>
+                      <option value="Interscan Web Security Suite">Interscan Web Security Suite</option>
+                      <option value="Interscan Web Security Virtual Appliance">Interscan Web Security Virtual Appliance</option>
+                      <option value="InterScan WebManager SCC">InterScan WebManager SCC</option>
+                      <option value="Interscan Webprotect">Interscan Webprotect</option>
+                      <option value="Intrusion Defense Firewall">Intrusion Defense Firewall</option>
+                      <option value="Intrusion Defense Firewall">Intrusion Defense Firewall</option>
+                      <option value="Leakproof">Leakproof</option>
+                      <option value="Licensing Management Platform">Licensing Management Platform</option>
+                      <option value="Messaging Archiver">Messaging Archiver</option>
+                      <option value="Mobile Security For Enterprise">Mobile Security For Enterprise</option>
+                      <option value="Network Viruswall">Network Viruswall</option>
+                      <option value="OfficeScan">OfficeScan</option>
+                      <option value="Officescan Plug-In - Data Protection">Officescan Plug-In - Data Protection</option>
+                      <option value="Officescan Plug-In - Mobile Security">Officescan Plug-In - Mobile Security</option>
+                      <option value="OfficeScan Plug-in - VDI">OfficeScan Plug-in - VDI</option>
+                      <option value="Policy Manager">Policy Manager</option>
+                      <option value="Portable Security">Portable Security</option>
+                      <option value="Portalprotect">Portalprotect</option>
+                      <option value="Power Management">Power Management</option>
+                      <option value="Remote Manager">Remote Manager</option>
+                      <option value="Safe Lock">Safe Lock</option>
+                      <option value="Safe Mobile Workforce">Safe Mobile Workforce</option>
+                      <option value="Safesync For Business">Safesync For Business</option>
+                      <option value="Safesync For Enterprise">Safesync For Enterprise</option>
+                      <option value="Safesync For XSP">Safesync For XSP</option>
+                      <option value="Scanmail For Exchange">Scanmail For Exchange</option>
+                      <option value="Scanmail For Ibm Domino">Scanmail For Ibm Domino</option>
+                      <option value="SDN Adaptor For Nec">SDN Adaptor For Nec</option>
+                      <option value="Securecloud As A Service">Securecloud As A Service</option>
+                      <option value="Securecloud On Premise">Securecloud On Premise</option>
+                      <option value="Security For Macintosh">Security For Macintosh</option>
+                      <option value="ServerProtect">ServerProtect</option>
+                      <option value="ServerProtect For EMC Celerra">ServerProtect For EMC Celerra</option>
+                      <option value="ServerProtect For Linux">ServerProtect For Linux</option>
+                      <option value="ServerProtect For Storage">ServerProtect For Storage</option>
+                      <option value="Smart Protection Complete">Smart Protection Complete</option>
+                      <option value="Smart Protection For Endpoints">Smart Protection For Endpoints</option>
+                      <option value="Smart Protection Server">Smart Protection Server</option>
+                      <option value="SSL">SSL</option>
+                      <option value="Storage Security For Eternus DX Series">Storage Security For Eternus DX Series</option>
+                      <option value="Threat Discovery Appliance">Threat Discovery Appliance</option>
+                      <option value="Threat Intelligence Manager">Threat Intelligence Manager</option>
+                      <option value="Threat Management Agent">Threat Management Agent</option>
+                      <option value="Threat Management Service Portal">Threat Management Service Portal</option>
+                      <option value="Threat Mitigator">Threat Mitigator</option>
+                      <option value="TippingPoint Advanced Threat Protection for Networks">TippingPoint Advanced Threat Protection for Networks</option>
+                      <option value="Titanium Internet Security For Mac">Titanium Internet Security For Mac</option>
+                      <option value="Titanium Maximum Security">Titanium Maximum Security</option>
+                      <option value="Virtual Desktop Infrastructure">Virtual Desktop Infrastructure</option>
+                      <option value="Virusbuster Cloud">Virusbuster Cloud</option>
+                      <option value="Vsapi Virus Scan Engine">Vsapi Virus Scan Engine</option>
+                      <option value="Vulnerability Management Services">Vulnerability Management Services</option>
+                      <option value="Vulnerability Protection">Vulnerability Protection</option>
+                      <option value="Web Security For Yamaha Router">Web Security For Yamaha Router</option>
+                      <option value="Worry Free Services for Dell">Worry Free Services for Dell</option>
+                      <option value="Worry-Free Business Security Advanced">Worry-Free Business Security Advanced</option>
+                      <option value="Worry-Free Business Security Services">Worry-Free Business Security Services</option>
+                      <option value="Worry-Free Business Security Standard">Worry-Free Business Security Standard</option>
+                      <option value="Worry-Free Plug-In - Security For MAC">Worry-Free Plug-In - Security For MAC</option>
+                      <option value="Worry-Free Remote Manager">Worry-Free Remote Manager</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label class="control-label">Product Version:</label>
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="11.0">11.0</option>
+                    <option value="10.6">10.6</option>
+                    <option value="10.5">10.5</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label class="control-label">Product Language:</label>
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="English">English</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Polish">Polish</option>
+                    <option value="Portuguese">Portuguese</option>
+                    <option value="Russian">Russian</option>
+                    <option value="Simplified Chinese">Simplified Chinese</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="Traditional Chinese">Traditional Chinese</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-12">
+                  <label class="control-label">Product Activation Code:</label>
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="OS-YZET-J8Y79-ALQUE-ZQPV8-2A7U9-HRZ4F">OS-YZET-J8Y79-ALQUE-ZQPV8-2A7U9-HRZ4F</option>
+                    <option value="EI-84Y5-YY74W-7QFFM-ZLJGS-6N4DC-ZARHQ">EI-84Y5-YY74W-7QFFM-ZLJGS-6N4DC-ZARHQ</option>
+                    <option value="OS-EMX2-V696V-CKCVS-XXLXB-9FLKT-FEY2L">OS-EMX2-V696V-CKCVS-XXLXB-9FLKT-FEY2L</option>
+                    <option value="OS-696N-M4WGB-BELL4-WAVX9-7XYKT-Q8BEF">OS-696N-M4WGB-BELL4-WAVX9-7XYKT-Q8BEF</option>
+                    <option value="OS-93EM-RCW73-RBE4D-NRDY5-AZVBF-752GC">OS-93EM-RCW73-RBE4D-NRDY5-AZVBF-752GC</option>
+                    <option value="OS-AZTL-X2A78-RWWY2-KLHTX-77CPM-XHELP">OS-AZTL-X2A78-RWWY2-KLHTX-77CPM-XHELP</option>
+                    <option value="OS-BGMF-GWFT3-Y4KYZ-8X4QJ-H7XEY-ZGJHQ">OS-BGMF-GWFT3-Y4KYZ-8X4QJ-H7XEY-ZGJHQ</option>
+                    <option value="OS-HRYY-U6YED-6ZXMP-FHK43-3Y4PH-RCYNQ">OS-HRYY-U6YED-6ZXMP-FHK43-3Y4PH-RCYNQ</option>
+                    <option value="OS-J4RD-AWUPC-N3K3L-PYMAK-TGWV8-ZFDBN">OS-J4RD-AWUPC-N3K3L-PYMAK-TGWV8-ZFDBN</option>
+                    <option value="EI-QE6V-7WZQV-8FETC-R6X9N-LWGLM-VAK8C">EI-QE6V-7WZQV-8FETC-R6X9N-LWGLM-VAK8C</option>
+                    <option value="OS-U88F-L8976-7PXTX-SUDPM-U6KP4-UC35G">OS-U88F-L8976-7PXTX-SUDPM-U6KP4-UC35G</option>
+                    <option value="OS-EHPK-ASP57-QFVA6-VV953-HZPL4-P6JFJ">OS-EHPK-ASP57-QFVA6-VV953-HZPL4-P6JFJ</option>
+                    <option value="OS-TP95-M6YB2-L595G-J7U79-5BT9E-J2PDE">OS-TP95-M6YB2-L595G-J7U79-5BT9E-J2PDE</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label class="control-label">Virus Pattern Type:</label>
+                  <div class="radio">
+                    <label><input type="radio" name="virus-pattern" value="conventional" checked>Conventional Pattern</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="virus-pattern" value="smart-scan">Smart Scan Pattern</label>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <div class="checkbox">
+                    <label><input type="checkbox">Behavior Monitoring</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-info btn-sm" type="button">Save Profile</button>
+        <button class="btn btn-link btn-sm" data-dismiss="modal" type="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

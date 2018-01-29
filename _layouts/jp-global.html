@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% include _ja-jp/global/meta-data.html %}
+    <title>{{ page.meta-title }} | Trend Micro</title>
+    {% include _ja-jp/global/favicon.html %}
+    {% include _ja-jp/global/stylesheet.html %}
+
+  </head>
+
+  <body data-spy="scroll" data-target="#sidebar-nav" data-offset="250">
+
+    <span style="{% if page.url contains '/ja-jp/tls-error.html' %} display: none; {% endif %}">
+      {% include _ja-jp/components/header.html %}
+    </span>
+
+    <span class="hidden-md hidden-lg" style="{% if
+      page.url contains '/ja-jp/business-support.html' or
+      page.url contains '/ja-jp/search-result.html'
+    %} display: block !important; {% endif %}
+
+    {% if
+      page.url contains '/ja-jp/product-support/office-scan.html' or
+      page.url contains '/ja-jp/product-support/deep-security.html'
+    %} display: none; {% endif %}">
+      {% include _ja-jp/components/search.html %}
+    </span>
+
+    <span style="display: none; {% if
+      page.url contains '/ja-jp/business-support.html' or
+      page.url contains '/ja-jp/esupport/technical-support.html' or
+      page.url contains '/ja-jp/esupport/virus-and-threat-help.html' or
+      page.url contains '/ja-jp/esupport/renewals-and-registration.html' or
+      page.url contains '/ja-jp/contact-support/asia-pacific.html' or
+      page.url contains '/ja-jp/product-support/office-scan.html' or
+      page.url contains '/ja-jp/product-support/deep-security.html'
+    %}
+      display: block !important;
+    {% endif %}">
+      {% include _ja-jp/components/notification.html %}
+    </span>
+
+    <span style="{% if
+      page.url contains '/ja-jp/product-support/office-scan.html' or
+      page.url contains '/ja-jp/product-support/deep-security.html'
+    %}
+      display: none;
+    {% endif %}">
+      {% include _ja-jp/components/mobile-header.html %}
+    </span>
+
+    {% include _ja-jp/components/nav/mobile-navigation.html %}
+
+    {{ content }}
+
+    {% include _ja-jp/footer-global.html %}
+    {% include _ja-jp/components/modal.html %}
+
+    {% include _ja-jp/global/javascript.html %}
+
+  </body>
+
+</html>

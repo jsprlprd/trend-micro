@@ -1,0 +1,46 @@
+<div id="infected-attachment">
+  <div class="row">
+    <div class="col-md-6">
+      <fieldset class="form-group form-required">
+        <label class="control-label col-sm-12" style="text-align: left;">Virus File or Email File</label>
+        <div class="col-sm-12">
+          <div class="help-block">
+            <ul class="list list-condensed">
+              <li>Use the ATTK Quick Collect Tool for best results: <a href="">32-bit (23mb)</a> | <a href="">64-bit (24mb)</a>.</li>
+              <li>If not using ATTK, compress all files and protect with password <strong class="text-primary">virus</strong>, <strong class="text-primary">novirus</strong> or <strong class="text-primary">infected</strong>.</li>
+              <li>If you are using IE and unable to see the attachment field, <a href="">follow these steps</a>.</li>
+            </ul>
+          </div>
+          <div>
+            <button class="btn btn-default" data-loading-text="Uploading File" data-complete-text="Upload More File" type="button" onclick="$(this).button('loading').siblings().prop('disabled', false);">
+              Browse
+            </button>
+            <span class="small text-muted" style="margin-left: 10px;">(File Size Limit: 250 MB)</span>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-6">
+      <fieldset class="form-group form-required">
+        <label class="control-label col-sm-12" style="text-align: left;">Supporting File</label>
+        <div class="col-sm-12">
+          <div class="help-block">
+            <ul class="list list-condensed">
+              <li>If you have screen shot or any reference log like to share with Trend Micro, please compress the archive with password <strong class="text-primary">novirus</strong>.</li>
+            </ul>
+          </div>
+          <div>
+            <button class="btn btn-default" data-loading-text="Uploading File" data-complete-text="Upload More File" type="button" onclick="$(this).button('loading').siblings().prop('disabled', false);">
+              Browse
+            </button>
+            <span class="small text-muted" style="margin-left: 10px;">(File Size Limit: 250 MB)</span>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <hr />
+  <div class="checkbox">
+    <label><input type="checkbox" name="infected-attachment-request" value="Request Bandage Pattern">Request Bandage Pattern</label>
+  </div>
+</div>

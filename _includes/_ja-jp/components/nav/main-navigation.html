@@ -1,0 +1,171 @@
+<nav class="collapse navbar-collapse" id="main-navigation">
+
+  <div class="dropdown dropdown-hover" id="user-profile">
+    <a href="{{ site.baseurl }}/ja-jp/portal-access/sign-in.html">
+      <div class="user-avatar">
+        <img src="{{ site.baseurl }}/assets/images/avatar.png" alt="Jasper Lepardo" title="Jasper Lepardo" />
+      </div>
+      <div class="user-details">
+        <div class="user-name">Jasper Lepardo <i class="fa fa-caret-down fa-left"></i></div>
+        <div class="user-company">Trend Micro Incorporated</div>
+      </div>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+      <ul class="dropdown-menu-inner">
+        <li class="dropdown-header">マイアカウント</li>
+        <li class="{% if page.url == '/ja-jp/mysupport/my-profile.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/ja-jp/mysupport/my-profile.html">お知らせマイプロファイル</a>
+        </li>
+        <li class="{% if page.url == '/ja-jp/mysupport/my-products-and-services.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/ja-jp/mysupport/my-products-and-services.html">契約・製品関連情報</a>
+        </li>
+        <li class="{% if page.url == '/ja-jp/mysupport/my-contacts.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/ja-jp/mysupport/my-contacts.html">連絡先</a>
+        </li>
+        <li class="divider"></li>
+        <li class="{% if
+          page.url contains '/ja-jp/user-guide/index.html' or
+          page.url contains '/ja-jp/user-guide/internet-explorer-security-configuration.html' or
+          page.url contains '/ja-jp/user-guide/new-request.html'
+        %} active {% endif %}">
+          <a href="{{ site.baseurl }}/ja-jp/user-guide/index.html">ユーザーガイド</a>
+        </li>
+        <li class="divider"></li>
+        <li class="{% if page.url == '/ja-jp/portal-access/select-account.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/ja-jp/portal-access/select-account.html">アカウントを選択します</a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/ja-jp/business-support.html">ログアウト<i class="fa fa-sign-out fa-left"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <span style="{% if
+    page.url contains '/ja-jp/business-support.html' or
+    page.url contains '/ja-jp/product-support/office-scan.html' or
+    page.url contains '/ja-jp/product-support/deep-security.html' or
+    page.url contains '/ja-jp/search-result.html'
+    %} display: none; {% endif %}">
+    <div id="custom-search">
+      <div class="input-group input-group-lg">
+        <div class="form-group form-reset">
+          <input class="form-control" type="search" placeholder="検索サポート" required>
+          <button class="reset" type="reset">&times;</button>
+        </div>
+        <span class="input-group-btn hidden-xs hidden-sm">
+          <select class="selectpicker">
+            <optgroup label="あなたの検索をすることにより、フィルタ：">
+              <option>すべての製品</option>
+              <option>Cloud App Security For Office 365</option>
+              <option>Control Manager</option>
+              <option>Data Loss Prevention Endpoint</option>
+              <option>Deep Discovery Inspector</option>
+              <option>Deep Security</option>
+              <option>Deep Security As A Service</option>
+              <option>Deep Security For Web Apps</option>
+              <option>Email Encryption Gateway</option>
+              <option>Encryption For Email</option>
+              <option>Endpoint Application Control</option>
+              <option>Endpoint Encryption</option>
+              <option>Hosted Email Security</option>
+              <option>Hosted Mobile Security</option>
+              <option>Interscan Messaging Security</option>
+              <option>Interscan Web Security As A Service</option>
+              <option>Interscan Web Security Virtual Appliance</option>
+              <option>Mobile Security For Enterprise</option>
+              <option>OfficeScan</option>
+              <option>Portalprotect</option>
+              <option>Remote Manager</option>
+              <option>Safesync For Business</option>
+              <option>Safesync For Enterprise</option>
+              <option>Scanmail For Exchange</option>
+              <option>Securecloud As A Service</option>
+              <option>Securecloud On Premise</option>
+              <option>ServerProtect For EMC Celerra</option>
+              <option>ServerProtect For Linux</option>
+              <option>ServerProtect For Microsoft Windows/Novell Netware</option>
+              <option>ServerProtect For Storage</option>
+              <option>Threat Discovery Appliance</option>
+              <option>Threat Intelligence Manager</option>
+              <option>Worry-Free Business Security Advanced</option>
+              <option>Worry-Free Business Security Services</option>
+            </optgroup>
+          </select>
+        </span>
+        <span class="input-group-btn">
+          <a href="{{ site.baseurl }}/ja-jp/search.html" class="btn btn-info"><i class="fa fa-search"></i></a>
+        </span>
+      </div>
+    </div>
+  </span>
+
+  <div class="clearfix"></div>
+
+  <!-- <span style="{% if
+    page.url contains '/ja-jp/business-support.html' or
+    page.url contains '/ja-jp/product-support/office-scan.html' or
+    page.url contains '/ja-jp/product-support/deep-security.html' or
+    page.url contains '/ja-jp/search-result.html'
+    %} display: none; {% endif %}">
+    <form class="navbar-form navbar-right has-icon left">
+      <fieldset class="form-group form-reset">
+        <input class="form-control" type="search" placeholder="Search Support" required="">
+        <button class="reset" type="reset">&times;</button>
+        <i class="fa fa-search form-control-icon"></i>
+      </fieldset>
+    </form>
+  </span> -->
+
+  <ul class="nav nav-tabs nav-tabs-four nav-center">
+    <li class="dropdown dropdown-hover
+      {% if
+        page.url contains '/ja-jp/esupport/technical-support.html' or
+        page.url contains '/ja-jp/product-support/office-scan.html' or
+        page.url contains '/ja-jp/product-support/deep-security.html'
+      %}
+      active
+      {% endif %}">
+      <a href="{{ site.baseurl }}/ja-jp/esupport/technical-support.html">製品別サポート<i class="fa fa-caret-down fa-left hidden-xs hidden-sm"></i></a>
+      <div class="dropdown-menu dropdown-menu-left">
+        <ul class="dropdown-menu-inner">
+          <li class="dropdown-header">Popular Products</li>
+          <li class="{% if page.url == '/ja-jp/product-support/office-scan.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/ja-jp/product-support/office-scan.html">OfficeScan</a>
+          </li>
+          <li><a href="">Worry-Free Business Security Standard/Advanced</a></li>
+          <li class="{% if page.url == '/ja-jp/product-support/deep-security.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/ja-jp/product-support/deep-security.html">Deep Security</a>
+          </li>
+          <li><a href="">Hosted Email Security</a></li>
+          <li><a href="">Endpoint Encription</a></li>
+          <li class="divider"></li>
+          <li>
+            <a href="{{ site.baseurl }}/ja-jp/all-products.html" data-toggle="modal" data-target="#all-products" data-remote="{{ site.baseurl }}/ja-jp/all-products.html"><strong>VIEW MORE PRODUCTS <i class="fa fa-chevron-circle-right fa-left"></i></strong></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="{% if page.url == '/ja-jp/esupport/virus-and-threat-help.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/esupport/virus-and-threat-help.html">ウイルスサポートウェブ</a>
+    </li>
+    <li class="{% if page.url == '/ja-jp/esupport/renewals-and-registration.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/ja-jp/esupport/renewals-and-registration.html">契約更新手続き</a>
+    </li>
+    <li class="{% if page.url == '/ja-jp/contact-support/asia-pacific/japan.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/ja-jp/contact-support/asia-pacific/japan.html">技術問い合わせ窓口一覧</a>
+    </li>
+    <li class="{% if
+        page.url contains '/ja-jp/mysupport/dashboard.html' or
+        page.url contains '/ja-jp/mysupport/new-request.html' or
+        page.url contains '/ja-jp/mysupport/support-requests.html' or
+        page.url contains '/ja-jp/mysupport/diagnostic-tools.html' or
+        page.url contains '/ja-jp/mysupport/announcements.html' or
+        page.url contains '/ja-jp/mysupport/my-profile.html' or
+        page.url contains '/ja-jp/mysupport/my-products-and-services.html' or
+        page.url contains '/ja-jp/mysupport/my-contacts.html'
+      %} active {% endif %}">
+      <a href="{{ site.baseurl }}/ja-jp/mysupport/dashboard.html">マイサポート</a>
+    </li>
+  </ul>
+</nav>

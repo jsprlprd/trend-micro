@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% include _en-us/global/meta-data.html %}
+    <title>{{ page.metaTitle }} | Trend Micro</title>
+    {% include _en-us/global/favicon.html %}
+    {% include _en-us/global/stylesheet.html %}
+
+  </head>
+
+  <body style="margin-top: 75px; margin-bottom: 100px;">
+
+    <span style="{% if page.url contains '/en-us/tls-error.html' %} display: none; {% endif %}">
+      {% include _en-us/components/header.html %}
+    </span>
+
+    <main class="container" id="{{ page.pageID }}">
+
+      {% include _en-us/components/heading.html %}
+
+      {{ content }}
+
+    </main>
+
+    {% include _en-us/footer-local.html %}
+
+  </body>
+
+</html>

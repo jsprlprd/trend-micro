@@ -1,0 +1,50 @@
+---
+
+layout: en-global
+
+pageCSS: esupport.css
+
+---
+
+<span style="display: none; {% if
+  page.url contains '/en-us/product-support/office-scan.html' or
+  page.url contains '/en-us/product-support/deep-security.html'
+%}
+  display: block !important;
+{% endif %}">
+  {% include _en-us/components/product-banner.html %}
+</span>
+
+<main class="container" id="{{ page.pageID }}">
+
+  <span style="{% if
+    page.url contains '/en-us/product-support/office-scan.html' or
+    page.url contains '/en-us/product-support/deep-security.html'
+  %}
+    display: none;
+  {% endif %}">
+    {% include _en-us/components/heading.html %}
+  </span>
+
+  <span style="display: none; {% if
+    page.url contains '/en-us/esupport/technical-support.html' or
+    page.url contains '/en-us/product-support/office-scan.html'
+  %}
+    display: block !important;
+  {% endif %}">
+    {% include _en-us/components/alert.html %}
+  </span>
+
+  {{ content }}
+
+</main>
+
+<span style="display: none; {% if
+  page.url contains '/en-us/product-support/office-scan.html' or
+  page.url contains '/en-us/product-support/deep-security.html' or
+  page.url contains '/en-us/solutions/1034393-using-the-trend-micro-rootkit-buster.html'
+%}
+  display: block;
+{% endif %}">
+  {% include _en-us/components/floating-button.html %}
+</span>

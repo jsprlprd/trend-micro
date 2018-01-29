@@ -1,0 +1,46 @@
+---
+
+layout: jp-global
+
+pageCSS: article.css
+
+---
+
+<main class="container" id="{{ page.pageID }}">
+
+  <div class="heading hidden-xs hidden-sm">
+    <h1 class="heading-title display-3">{{ page.heading-title }}</h1>
+    <div class="heading-subtitle">
+      <ul class="list list-toggable">
+        <li>
+          <ul class="list list-icon list-toggable">
+            <li class="icon-clock-o list-title">Updated:</li>
+            <li>{{ page.solutionUpdated }}</li>
+          </ul>
+        </li>
+        <li class="display-item" data-display-item="2" id="product-version">
+          <ul class="list list-toggable">
+            <li class="list-title">Product/Version:</li>
+            <li>{{ page.solutionVersion }}</li>
+          </ul>
+          <a href="" class="display-toggle show-more"></a>
+          <a href="" class="display-toggle show-less"></a>
+        </li>
+        <li class="display-item" data-display-item="2" id="product-platform">
+          <ul class="list list-toggable">
+            <li class="list-title">Platform:</li>
+            <li>{{ page.solutionPlatform }}</li>
+          </ul>
+          <a href="" class="display-toggle show-more"></a>
+          <a href="" class="display-toggle show-less"></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  {{ content }}
+
+</main>
+
+{% include _ja-jp/components/floating-button.html %}

@@ -1,0 +1,28 @@
+<nav class="hidden-xs hidden-sm fixed-down" id="sub-navigation">
+
+  <ul class="nav nav-sm">
+    <li class="{% if page.url == '/en-us/business/mysupport/dashboard.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/en-us/business/mysupport/dashboard.html">Dashboard</a>
+    </li>
+    <li class="{% if page.url == '/en-us/business/mysupport/new-request.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/en-us/business/mysupport/new-request.html">New Request</a>
+    </li>
+    <li class="{% if
+        page.url contains '/en-us/business/mysupport/support-requests/' or
+        page.url contains '/en-us/business/case/product-cases.html' or
+        page.url contains '/en-us/business/case/threat-cases.html' or
+        page.url contains '/en-us/business/case/url-cases.html'
+      %}
+      active
+      {% endif %}">
+      <a href="{{ site.baseurl }}/en-us/business/mysupport/support-requests/">Support Requests</a>
+    </li>
+    <li class="{% if page.url == '/en-us/business/mysupport/diagnostic-tools.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/en-us/business/mysupport/diagnostic-tools.html">Diagnostic Tools</a>
+    </li>
+    <li class="{% if page.url == '/en-us/business/mysupport/announcements.html' %} active {% endif %}">
+      <a href="{{ site.baseurl }}/en-us/business/mysupport/announcements.html">Announcements</a>
+    </li>
+  </ul>
+
+</nav>

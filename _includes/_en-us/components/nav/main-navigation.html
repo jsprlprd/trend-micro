@@ -1,0 +1,144 @@
+<nav class="collapse navbar-collapse" id="main-navigation">
+
+  <div class="dropdown dropdown-hover" id="user-profile">
+    <a href="{{ site.baseurl }}/en-us/business/portal-access/sign-in.html">
+      <div class="user-avatar">
+        <img src="{{ site.baseurl }}/assets/images/avatar.png" alt="Jasper Lepardo" title="Jasper Lepardo" />
+      </div>
+      <div class="user-details">
+        <div class="user-name">Jasper Lepardo <i class="fa fa-caret-down fa-left"></i></div>
+        <div class="user-company">Trend Micro Incorporated</div>
+      </div>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+      <ul class="dropdown-menu-inner">
+        <li class="dropdown-header">My Account</li>
+        <li class="{% if page.url == '/en-us/business/mysupport/my-profile.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/en-us/business/mysupport/my-profile.html">My Profile</a>
+        </li>
+        <li class="{% if page.url == '/en-us/business/mysupport/my-products-and-services.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/en-us/business/mysupport/my-products-and-services.html">My Products &amp; Services</a>
+        </li>
+        <li class="{% if page.url == '/en-us/business/mysupport/my-contacts.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/en-us/business/mysupport/my-contacts.html">My Contacts</a>
+        </li>
+        <li class="divider"></li>
+        <li class="{% if
+          page.url contains '/en-us/business/user-guide/' or
+          page.url contains '/en-us/business/user-guide/internet-explorer-security-configuration.html' or
+          page.url contains '/en-us/business/user-guide/new-request.html'
+        %} active {% endif %}">
+          <a href="{{ site.baseurl }}/en-us/business/user-guide/">User Guide</a>
+        </li>
+        <li class="divider"></li>
+        <li class="{% if page.url == '/en-us/business/portal-access/select-account.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/en-us/business/portal-access/select-account.html">Select Account</a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/en-us/business/">Logout<i class="fa fa-sign-out fa-left"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <span style="{% if
+    page.url contains '/en-us/business/business-support.html' or
+    page.url contains '/en-us/business/product-support/office-scan.html' or
+    page.url contains '/en-us/business/product-support/deep-security.html' or
+    page.url contains '/en-us/business/search-result.html'
+    %} display: none; {% endif %}">
+    <form class="navbar-form navbar-right has-icon left">
+      <fieldset class="form-group form-reset">
+        <input class="form-control" type="search" placeholder="Search Support" required>
+        <button class="reset" type="reset">&times;</button>
+        <i class="fa fa-search form-control-icon"></i>
+      </fieldset>
+    </form>
+  </span>
+
+  <ul class="nav nav-tabs nav-tabs-four">
+    <li class="dropdown dropdown-hover
+      {% if
+        page.url contains '/en-us/business/technical-support.html' or
+        page.url contains '/en-us/business/product-support/office-scan.html' or
+        page.url contains '/en-us/business/product-support/deep-security.html'
+      %}
+      active
+      {% endif %}">
+      <a href="{{ site.baseurl }}/en-us/business/technical-support.html">Technical Support<i class="fa fa-caret-down fa-left hidden-xs hidden-sm"></i></a>
+      <div class="dropdown-menu dropdown-menu-left">
+        <ul class="dropdown-menu-inner">
+          <li class="dropdown-header">Popular Products</li>
+          <li class="{% if page.url == '/en-us/business/product-support/office-scan.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/en-us/business/product-support/office-scan.html">OfficeScan</a>
+          </li>
+          <li><a href="">Worry-Free Business Security Standard/Advanced</a></li>
+          <li class="{% if page.url == '/en-us/business/product-support/deep-security.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/en-us/business/product-support/deep-security.html">Deep Security</a>
+          </li>
+          <li><a href="">Hosted Email Security</a></li>
+          <li><a href="">Endpoint Encription</a></li>
+          <li class="divider"></li>
+          <li>
+            <a href="{{ site.baseurl }}/en-us/business/all-products.html" data-toggle="modal" data-target="#all-products" data-remote="{{ site.baseurl }}/en-us/business/all-products.html"><strong>VIEW MORE PRODUCTS <i class="fa fa-chevron-circle-right fa-left"></i></strong></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="{% if page.url == '/en-us/business/virus-and-threat-help.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/virus-and-threat-help.html">Virus &amp; Threat Help</a>
+    </li>
+    <li class="{% if page.url == '/en-us/business/renewals-and-registration.html' %} active {% endif %}">
+        <a href="{{ site.baseurl }}/en-us/business/renewals-and-registration.html">Renewals &amp; Registration</a>
+    </li>
+    <li class="
+      {% if
+        page.url contains '/en-us/business/contact-support/asia-pacific.html' or
+        page.url contains '/en-us/business/contact-support/europe.html' or
+        page.url contains '/en-us/business/contact-support/latin-america.html' or
+        page.url contains '/en-us/business/contact-support/mediterranean-middle-east-and-africa.html' or
+        page.url contains '/en-us/business/contact-support/north-america.html'
+      %}
+      active
+      {% endif %}">
+      <a href="{{ site.baseurl }}/en-us/business/contact-support/asia-pacific.html">Contact Support</a>
+    </li>
+    <li class="dropdown dropdown-hover
+      {% if
+        page.url contains '/en-us/business/mysupport/dashboard.html' or
+        page.url contains '/en-us/business/mysupport/new-request.html' or
+        page.url contains '/en-us/business/mysupport/support-requests/' or
+        page.url contains '/en-us/business/mysupport/diagnostic-tools.html' or
+        page.url contains '/en-us/business/mysupport/announcements.html' or
+        page.url contains '/en-us/business/mysupport/my-profile.html' or
+        page.url contains '/en-us/business/mysupport/my-products-and-services.html' or
+        page.url contains '/en-us/business/mysupport/my-contacts.html'
+      %}
+      active
+      {% endif %}">
+      <a href="{{ site.baseurl }}/en-us/business/mysupport/dashboard.html">MySupport<i class="fa fa-caret-down fa-left"></i></a>
+      <div class="dropdown-menu dropdown-menu-left">
+        <ul class="dropdown-menu-inner">
+          <li class="dropdown-header">My Support</li>
+          <li class="{% if page.url == '/en-us/business/mysupport/dashboard.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/en-us/business/mysupport/dashboard.html">Dashboard</a>
+          </li>
+          <li class="{% if page.url == '/en-us/business/mysupport/new-request.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/en-us/business/mysupport/new-request.html">New Request</a>
+          </li>
+          <li class="{% if page.url == '/en-us/business/mysupport/support-requests/' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/en-us/business/mysupport/support-requests/">Support Request</a>
+          </li>
+          <li class="{% if page.url == '/en-us/business/mysupport/diagnostic-tools.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/en-us/business/mysupport/diagnostic-tools.html">Diagnostic Tools</a>
+          </li>
+          <li class="{% if page.url == '/en-us/business/mysupport/announcements.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/en-us/business/mysupport/announcements.html">Announcements</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,1797 @@
+---
+
+layout: jp-mysupport
+
+meta-title: New Request
+
+pageID: new-request
+
+heading-title: フォームで問い合わせ
+heading-title-display: 1
+
+heading-subtitle: 製品・脅威などのケースを登録してください
+
+heading-subtitle-link-text: <i class="fa fa-question-circle"></i>
+heading-subtitle-link-url:
+
+heading-visibility: hidden-xs hidden-sm
+heading-image-visibility: none
+heading-subtitle-top-visibility: none
+
+---
+
+<form class="form-horizontal">
+
+  <fieldset class="form-group form-required">
+    <label class="control-label col-sm-3">サービス名:</label>
+    <div class="col-sm-8 col-md-6 col-lg-5">
+      <select class="form-control">
+        <optgroup label="サービス名">
+          <option selected disabled>Standard Support</option>
+          <option>Premium Support - Diamond</option>
+          <option>Premium Support - Gold</option>
+          <option>Premium Support - Silver</option>
+        </optgroup>
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group form-required" id="product-profile">
+    <label class="control-label col-sm-3">製品プロフィールの選択:</label>
+    <div class="col-sm-8 col-md-6 col-lg-5">
+      <select class="form-control">
+        <option value="Default" selected disabled>プロフィールを選択してください</option>
+        <option value="OfficeScan">OfficeScan</option>
+        <option value="Worry-Free Business Security">Worry-Free Business Security</option>
+        <option value="Deep Security">Deep Security</option>
+        <option value="Hosted Email Security">Hosted Email Security</option>
+        <option value="Endpoint Encription">Endpoint Encription</option>
+      </select>
+      <div class="help-block"><a href="#product-profile-modal" data-toggle="modal">	製品プロフィールの追加・修正</a></div>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group form-required has-icon right" id="operating-system">
+    <label class="control-label col-sm-3">Affected Operating System:</label>
+    <div class="col-sm-8 col-md-6 col-lg-5">
+      <select class="form-control" disabled>
+        <option value="Default" selected disabled>問い合わせに関係するオペレーションシステムの選択</option>
+        <optgroup label="Operating System">
+          <option value="Windows 8.1 64-bit">Windows 8.1 64-bit</option>
+          <option value="Windows 8 64-bit">Windows 8 64-bit</option>
+          <option value="Windows 7 64-bit">Windows 7 64-bit</option>
+          <option value="Windows Vista 64-bit">Windows Vista 64-bit</option>
+          <option value="Windows 8.1 32-bit">Windows 8.1 32-bit</option>
+          <option value="Windows 8 32-bit">Windows 8 32-bit</option>
+          <option value="Windows 7 32-bit">Windows 7 32-bit</option>
+          <option value="Windows Vista 32-bit">Windows Vista 32-bit</option>
+        </optgroup>
+      </select>
+      <span class="form-control-icon"><img src="{{ site.baseurl }}/assets/images/fancybox_loading.gif" /> </span>
+    </div>
+  </fieldset>
+
+  <hr class="dashed">
+
+  <fieldset class="form-group" id="issue-type">
+    <label class="control-label col-sm-3">種別:</label>
+    <div class="col-sm-9">
+      <label class="radio-inline">
+        <input type="radio" name="request-type" value="Product Issue" checked>Product Issue
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="request-type" value="Virus and Malware Issue">Virus &amp; Malware Issue
+      </label>
+      <label class="radio-inline disabled" id="change-control">
+        <input type="radio" name="request-type" value="Change Control" disabled="true">Change Control
+      </label>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group form-required" id="issue-category">
+    <label class="control-label col-sm-3">カテゴリ:</label>
+    <div class="col-sm-8 col-md-6 col-lg-5">
+      <select class="form-control" id="product-issue-category">
+        <optgroup label="Product Issues">
+          <option value="Appliance Hardware" selected>Appliance Hardware</option>
+          <option value="Uninstall">Uninstall</option>
+          <option value="Installation">Installation</option>
+          <option value="Product Inquiry">Other Product Related Questions</option>
+          <option value="Performance">Performance</option>
+          <option value="Configuration">Configuration</option>
+          <option value="Update or Rollback">Update or Rollback</option>
+          <option value="UI or Document">User Interface Defects or Documentation Questions</option>
+          <option value="System Crash">System Crash</option>
+        </optgroup>
+        <optgroup label="Activation and Registration Issues">
+          <option value="Account Administration">Account Administration</option>
+          <option value="Licensing and Activation">Licensing and Activation</option>
+        </optgroup>
+      </select>
+      <select class="form-control" id="malware-issue-category">
+        <optgroup label="Virus and Malware Issues">
+          <option value="Verification" selected>For Verification Only</option>
+          <option value="Infected">Infected</option>
+          <option value="Spam False Negative">SPAM</option>
+          <option value="Spam False Positive">SPAM False Positive</option>
+          <option value="URL Reclassification">URL Reclassification</option>
+          <option value="Virus False Negative">Virus False Negative</option>
+          <option value="Virus False Positive">Virus False Postive</option>
+        </optgroup>
+      </select>
+      <select class="form-control" id="change-control-category" disabled></select>
+      <div class="help-block">
+        <ul class="list list-nospace" id="product-issue-description">
+          <li id="appliance-hardware-description">For hardware-related issues affecting a Trend Micro appliance product (ie. Network Viruswall, Interscan Gateway Security Appliance, Interscan Messaging Appliance, etc.</li>
+          <li id="uninstall-description">Problems removing a component or the entire product from the system.</li>
+          <li id="installation-description">Problems installing the entire product or a component of a product.</li>
+          <li id="product-inquiry-description"></li>
+          <li id="performance-description">Degradation or poor system performance after enabling a function or installing the product.</li>
+          <li id="configuration-description">Issues relating to setting up and enabling a functionality of a product like Realtime scanning, notification, Firewalls, and etc.</li>
+          <li id="update-rollback-description">Issues related to component updates and rollback such as pattern and scan engine update failures.</li>
+          <li id="user-interface-document-description">Management Console or Client-side console problems and product documentation (Installation Guide, Administrator Guide, or Online Help concerns.</li>
+          <li id="system-crash-description">Crash, hang, Blue-screen-of-Death (BSOD), ABEND, Core Dump, etc. after installing a component, enabling a feature, or installing the product.</li>
+          <li id="account-administration-description">Issues on enabling or disabling access to an online account.</li>
+          <li id="licensing-activation-description"></li>
+        </ul>
+        <ul class="list list-nospace" id="malware-issue-description">
+          <li id="verification-description">Select this request type if you wish to verify the results of your attachments. It could be files, emails, or URLs.</li>
+          <li id="infected-description">Select this request type if you are infected or suspect infection.</li>
+          <li id="spam-false-negative-description">Request to tag an email as SPAM.</li>
+          <li id="spam-false-positive-description">Request to analyze a valid email that was tagged as SPAM</li>
+          <li id="url-reclassification-description">Request re-validation of a blocked website or URL.</li>
+          <li id="virus-false-negative-description">Trend didn't detected it or treat it as normal file but customer consider it as a malware.</li>
+          <li id="virus-false-positive-description">Customer consider it is a normal file but trend detected it as malware.</li>
+        </ul>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group" id="sub-category">
+    <label class="control-label col-sm-3">サブカテゴリ:</label>
+    <div class="col-sm-8 col-md-6 col-lg-5">
+      <div id="spam-category">
+        <div class="radio">
+          <label><input type="radio" name="spam-category" value="Spam email not detected" checked>スパムメールが検出されない</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="spam-category" value="Legitimate emails detected as spam">正しいと思われるメールがスパムメールとして検出される	</label>
+        </div>
+      </div>
+      <div id="false-alarm-category">
+        <label class="radio-inline" id="false-positive">
+          <input type="radio" name="false-alarm-category" value="False Positive" checked>False Positive
+        </label>
+        <label class="radio-inline" id="false-negative">
+          <input type="radio" name="false-alarm-category" value="False Negative">False Negative
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group form-required has-icon right" id="virus-pattern-type">
+    <label class="control-label col-sm-3">ウイルスパターンタイプ	:</label>
+    <div class="col-sm-8 col-md-6 col-lg-5">
+      <select class="form-control" disabled>
+        <option value="Default" selected disabled>Choose a Product Profile</option>
+        <optgroup label="Virus Pattern Type">
+          <option value="Windows 8.1 64-bit">Conventional Pattern</option>
+          <option value="Windows 8 64-bit">Smart Scan Pattern</option>
+        </optgroup>
+      </select>
+      <span class="form-control-icon"><img src="{{ site.baseurl }}/assets/images/fancybox_loading.gif" /></span>
+      <div class="help-block">
+        <a href="#product-profile-modal" data-toggle="modal">Add to product profile</a>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group form-required" id="detection-name">
+    <label class="control-label col-sm-3">Detection Name:</label>
+    <div class="col-sm-8 col-md-6 col-lg-5">
+      <input type="text" class="form-control">
+    </div>
+  </fieldset>
+
+  <hr class="dashed">
+
+  <fieldset class="form-group form-group-lg form-required" id="subject">
+    <label class="control-label col-sm-3">タイトル:</label>
+    <div class="col-sm-8 col-md-6">
+      <input type="text" class="form-control">
+      <div class="help-block" id="subject-loading">問い合わせに関連しそうなQ&amp;Aを表示中です</div>
+    </div>
+  </fieldset>
+
+  <div class="form-group" id="suggested-articles">
+    <div class="col-sm-9 col-sm-offset-3">
+      <div class="well well-info well-lg" style="margin-bottom: 0;">
+        <button class="close" type="button">&times;</button>
+        <h3 class="well-title">These are articles may be related to your concern:</h3>
+        <ul class="list">
+          <li><a href="">Using the InterScan Web Security Virtual Appliance (IWSVA) Connectivity Test tool</a></li>
+          <li><a href="">Sending a test email using the SMTP Server settings</a></li>
+          <li><a href="">Checking the anti-virus scan of Trend Micro products using the EICAR test file</a></li>
+          <li><a href="">Virus Scan Engine in Worry-Free Business Security (WFBS) cannot detect copied EICAR test files in Real-time Scan mode</a></li>
+          <li><a href="">Test connection for WRS fails when IIS Binding is set to a specific IP Address in OfficeScan (OSCE) 10.6 SP1</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <fieldset class="form-group form-required" id="description">
+    <label class="control-label col-sm-3">説明:</label>
+    <div class="col-sm-8">
+      <div class="help-block">
+        <ul class="list list-condensed" id="description-product-issue">
+          <li>確認したい内容を可能な限り詳細に記載してください。また、製品のバージョンとビルドの明記をお願いします。</li>
+        </ul>
+        <!-- <ul class="list list-condensed" id="description-clean-failed">
+          <li>確認したい内容を可能な限り詳細に記載してください。</li>
+          <li>また、以下情報を明記ください。
+            <ul class="list list-bullet list-condensed">
+              <li>製品のバージョンとビルド</li>
+              <li>ウイルス名(検出名)</li>
+              <li>ウイルスの検索方法  (リアルタイム検出/手動検索またはScanNow/予約検索)</li>
+              <li>検出時の処理  (隔離/駆除/放置/その他)</li>
+              <li>ウイルス検出場所※ファイルパスやURL等</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="list list-condensed" id="description-spam">
+          <li>確認したい内容を可能な限り詳細に記載してください。</li>
+          <li>
+            また、製品のバージョンとビルドを明記ください。
+            <ul class="list list-bullet list-condensed">
+              <li>製品での検出がある場合、以下情報を記載ください。</li>
+              <li>ウイルス名(検出名)</li>
+              <li>ウイルスの検索方法  (リアルタイム検出/手動検索またはScanNow/予約検索)</li>
+              <li>検出時の処理  (隔離/駆除/放置/その他)</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="list list-condensed" id="description-url-reclassification">
+          <li>確認したい内容を可能な限り詳細に記載してください。</li>
+          <li>
+            また、以下情報を明記ください。
+            <ul class="list list-bullet list-condensed">
+              <li>製品のバージョンとビルド</li>
+              <li>検出時の状況などを詳細に記載してください。</li>
+              <li>Site Safety Center による評価 （安全/危険/不審/未評価)</li>
+              <li>Site Safety Center のカテゴリ</li>
+            </ul>
+        </ul>
+        <ul class="list list-condensed" id="description-virus-false-alarm">
+          <li>誤警告であると考える理由について可能な限り詳細に記載してください。</li>
+          <li>
+            また、以下情報を明記ください。
+            <ul class="list list-bullet list-condensed">
+              <li>製品のバージョンとビルド</li>
+              <li>製品での検出名</li>
+              <li>検出場所 (※ファイルパスやURL など)</li>
+              <li>検出した製品の機能 (※リアルタイム検索や挙動監視 など)</li>
+            </ul>
+          </li>
+        </ul> -->
+      </div>
+<textarea class="form-control form-control-jp" rows="15" style="max-height: 500px;">
+>仕様の確認の場合、確認の背景を必ず明記してください。
+
+>障害問い合わせの場合、以下を明記してください。
+発生している問題：
+エラーメッセージ：
+いつから発生しているか、どんなタイミングで発生しているか：
+再現頻度と影響範囲：
+再現手順：
+現象回避と原因の特定でどちらを優先するか：
+※状況が把握できるようなスクリーンショットがある場合、添付してください。
+</textarea>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group form-required" id="steps-taken">
+    <label class="control-label col-sm-3">事前に確認頂いた内容:</label>
+    <div class="col-sm-8">
+      <div class="help-block">
+        <ul class="list list-condensed">
+          <li>お客さまが確認された情報や、実施された切り分け内容の記載をお願いします。</li>
+          <li>また、現象発生前後で実施した作業(設定変更など)がありましたら、記載してください。</li>
+          <li>OS 側での調査など他社にもお問い合わせを実施している場合、</li>
+          <li>可能な範囲でその結果・見解の記載をお願いします。</li>
+          <li>※代理問い合わせの場合は、エンドユーザ様名を記載してください。</li>
+          <li>※本問い合わせに関連するお問い合わせをサポートセンターに行っている場合は、受付番号を記載してください。</li>
+        </ul>
+      </div>
+      <textarea class="form-control"></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group" id="attachment">
+    <label class="control-label col-sm-3">添付ファイル:</label>
+    <div class="col-sm-8">
+
+      <div id="neuron">
+        <div class="help-block">
+          <ul class="list list-condensed">
+            <li>Use the Case Diagnostic Tool for best results: <a href="">Windows</a> | <a href="">Linux</a> | <a href="">Solaris</a>. <a href="">Learn more about CDT</a>.</li>
+            <li><strong>Maximum file size of 250 MB per file</strong>. For larger files, please inform the assigned support engineer after you have created the case.</li>
+            <!-- <li>If you encounter problems with the attachment field, <a href="{{ site.baseurl }}/en-us/user-guide/internet-explorer-security-configuration.html" target="_blank">click here</a>.</li> -->
+          </ul>
+        </div>
+        <div class="iframe form-control">
+          <p style="margin-bottom: 0;">
+            <strong><i class="fa fa-cloud-upload fa-right"></i>Drop up to 3 files here</strong>
+            <br />
+            - or -
+            <br />
+            <a href="">Select form Computer</a>
+          </p>
+        </div>
+      </div>
+
+      <div id="trend-box">
+        <div id="attachment-type">
+          <label class="radio-inline">
+            <input type="radio" name="attachment-type" value="Supporting File" checked>Supporting File
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="attachment-type" value="Virus and Malware File">Virus &amp; Malware File
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="attachment-type" value="URL Text File">URL Text File
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="attachment-type" value="Email File">Email File
+          </label>
+        </div>
+
+        <hr />
+
+        <div class="help-block">
+          <ul class="list list-condensed" id="support-file-attachement">
+            <li>Please upload files, such as pictures or other documents and compress all files and protect with password <strong class="text-primary">virus</strong>, <strong class="text-primary">novirus</strong> or <strong class="text-primary">infected</strong>.</li>
+            <li>If you are using IE and unable to see the attachment field, <a href="">follow these steps</a>.</li>
+          </ul>
+          <ul class="list list-condensed" id="virus-and-malware-file-attachment">
+            <li>Use the ATTK Quick Collect Tool for best results: <a href="">32-bit (23mb)</a> | <a href="">64-bit (24mb)</a>.</li>
+            <li>If not using ATTK, compress all files and protect with password <strong class="text-primary">virus</strong>, <strong class="text-primary">novirus</strong> or <strong class="text-primary">infected</strong>.</li>
+            <li>If you are using IE and unable to see the attachment field, <a href="">follow these steps</a>.</li>
+          </ul>
+          <ul class="list list-condensed" id="url-text-file-attachment">
+            <li>Please upload a plain text file (.txt) with no limit on the number of URLs.</li>
+          </ul>
+          <ul class="list list-condensed" id="email-file-attachment">
+            <li>Please zip SPAM samples (original emails in .msg or .eml format) into 1 ZIP or RAR file using the password <strong class="text-primary">virus</strong>, <strong class="text-primary">novirus</strong> or <strong class="text-primary">infected</strong>. Failure to do so will result in processing delays.</li>
+            <li>If you are using IE and unable to see the attachment field, <a href="{{ site.baseurl }}/en-us/user-guide/internet-explorer-security-configuration.html" target="_blank">follow these steps</a>.</li>
+          </ul>
+        </div>
+
+        <div class="panel panel-default" id="attachment-list">
+          <table class="table table-stripped table-hover">
+            <thead>
+              <tr>
+                <th class="col-xs-11">File Name</th>
+                <th class="col-xs-1"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>screenshots.zip</td>
+                <td class="text-center">
+                  <a href=""><i class="fa fa-times"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>password.txt</td>
+                <td class="text-center">
+                  <a href=""><i class="fa fa-times"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>akeufa23akdu2309akdlcadi32hdfakcakdj.zip</td>
+                <td class="text-center">
+                  <a href=""><i class="fa fa-times"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <button class="btn btn-default" id="trend-box-upload" data-loading-text="Uploading File" data-complete-text="Upload More File" type="button" onclick="$(this).button('loading').siblings().prop('disabled', false);">
+            Browse
+          </button>
+          <span class="text-muted" style="margin-left: 10px;">(File Size Limit: 250 MB)</span>
+        </div>
+        <progress value="0" max="100" id="attachment-progress"></progress>
+
+        <div id="infected-attachment-request">
+          <hr />
+          <div class="checkbox">
+            <label><input type="checkbox" name="infected-attachment-request" value="Request Bandage Pattern">Request Bandage Pattern</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" name="infected-attachment-request" value="Request Clean Pattern">Request Clean Pattern</label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </fieldset>
+
+  <div id="url-reclassification">
+
+    <hr class="dashed">
+
+    <fieldset class="form-group form-required">
+      <label class="control-label col-sm-12" style="text-align: left;">Step 1: Verify Current Rating and Classification</label>
+      <div class="col-sm-12">
+        <div class="help-block">
+          <ul class="list list-condensed">
+            <li>Enter or <a href="" id="trigger-url-upload">upload a text file</a> with one or multiple URL, separated by a line break (use ENTER key).</li>
+            <li>Domains with symbols are not accepted (except for hypens). e.g. www.user@email.com or ftp://username.ftp.com</li>
+          </ul>
+        </div>
+        <textarea class="form-control" placeholder="https://trendmicro.com" id="txtArea"></textarea>
+        <div class="help-block">
+          <button class="btn btn-default btn-block-xs" data-loading-text="Updating Data" data-complete-text="Completed" type="button" onclick="$(this).button('loading').siblings().prop('disabled', false);">
+            現在の判定結果を確認
+          </button>
+          <button class="btn btn-link btn-block-xs">Clear</button>
+          <span class="pull-right">1 out of 10</span>
+        </div>
+        <input type='file' accept='text/plain' class="hidden" id="url-upload" onchange='openFile(event)'>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-group" id="url-table">
+      <label class="control-label col-sm-12" style="text-align: left;">Step 2: Review and Assign New Ratings and Classification</label>
+      <div class="col-sm-12">
+        <div class="help-block"></div>
+        <div class="panel panel-default table-responsive">
+          <table class="table table-bordered table-stripes">
+            <thead>
+              <tr>
+                <th class="col-xs-4">URL</th>
+                <th class="col-xs-3">Current Classification and Rating</th>
+                <th class="col-xs-3">New Classifcation</th>
+                <th class="col-xs-2">New Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active-state">
+                <td colspan="4" style="background: transparent;">
+                  <h6 class="table-state-title">Your URLs will appear here</h6>
+                  <p class="table-state-subtitle text-muted">The current rating/classification for each URL will be displayed for your review</p>
+                </td>
+              </tr>
+              <tr class="active-state hide">
+                <td colspan="4" class="loading">
+                  <span class="loading-content">Loading Content</span>
+                </td>
+              </tr>
+              <tr class="danger-state hide">
+                <td colspan="4">
+                  <h6 class="table-state-title">Sorry, we're unable to process your request at the moment.</h6>
+                  <p class="table-state-subtitle">There seems to be an internal system error. Please try again later.</p>
+                </td>
+              </tr>
+              <tr class="hide">
+                <td>https://stg-community-trendmicro.cs40.force.com/new-request</td>
+                <td class="Safe">
+                  Computers / Internet
+                  <div class="small text-muted">Safe</div>
+                </td>
+                <td class="warning"><a href="#url-reclassification-modal" data-toggle="modal" class="btn btn-link btn-block">Select a new classification</a></td>
+                <td class="warning">
+                  <select class="form-control">
+                    <option>Safe</option>
+                    <option>Dangerous</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="hide">
+                <td>https://stg-community-trendmicro.cs40.force.com/new-request</td>
+                <td class="Dangerous">
+                  Computers / Internet
+                  <div class="small text-muted">Dangerous</div>
+                </td>
+                <td class="warning"><a href="#url-reclassification-modal" data-toggle="modal" class="btn btn-link btn-block">Select a new classification</a></td>
+                <td class="warning">
+                  <select class="form-control">
+                    <option>Safe</option>
+                    <option>Dangerous</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="hide">
+                <td>https://stg-community-trendmicro.cs40.force.com/new-request</td>
+                <td class="Untested">
+                  Computers / Internet
+                  <div class="small text-muted">Untested</div>
+                </td>
+                <td class="warning"><a href="#url-reclassification-modal" data-toggle="modal" class="btn btn-link btn-block">Select a new classification</a></td>
+                <td class="warning">
+                  <select class="form-control">
+                    <option>Safe</option>
+                    <option>Dangerous</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </fieldset>
+
+  </div>
+
+  <hr class="dashed">
+
+  <fieldset class="form-group" id="case-severity">
+    <label class="control-label col-sm-3">Case Severity:</label>
+    <div class="col-sm-8">
+      <label class="radio-inline" id="low-severity">
+        <input type="radio" name="case-severity" value="Low Severity" checked />低
+      </label>
+      <label class="radio-inline" id="medium-severity">
+        <input type="radio" name="case-severity" value="Medium Severity" />中
+      </label>
+      <label class="radio-inline" id="high-severity">
+        <input type="radio" name="case-severity" value="High Severity" />高
+      </label>
+      <label class="radio-inline" id="critical-severity">
+        <input type="radio" name="case-severity" value="Critical Severity" />クリティカル
+      </label>
+    </div>
+  </fieldset>
+
+  <div class="popover_content hidden" id="low-severity-content">
+    <ul class="list list-bullet list-nospace">
+      <li>Cosmetic Trend Micro impairment or request for enhancement feature.</li>
+      <li>Little or no business impact.</li>
+      <li>No immediate resolution required.</li>
+      <li>Request for general information or questions.</li>
+    </ul>
+  </div>
+
+  <div class="popover_content hidden" id="medium-severity-content">
+    <ul class="list list-bullet list-nospace">
+      <li>Major Trend Micro software or service function impaired but operational.</li>
+      <li>Minor Trend Micro product or service component function not working as documented</li>
+      <li>Medium to low business impact.</li>
+      <li>Workaround available.</li>
+    </ul>
+  </div>
+
+  <div class="popover_content hidden" id="high-severity-content">
+    <ul class="list list-bullet list-nospace">
+      <li>Major Trend Micro software performance or service operation components severely impaired or degraded.</li>
+      <li>Significant impact to business operations.</li>
+    </ul>
+  </div>
+
+  <div class="popover_content hidden" id="critical-severity-content">
+    <ul class="list list-bullet list-nospace">
+      <li>Issues where major Trend Micro product or service components are rendered inoperable.</li>
+      <li>Critical impact to business operations.</li>
+      <li>No workaround available.</li>
+      <li>Around-the-clock Customer and Trend Micro commitment to address the incident.</li>
+    </ul>
+  </div>
+
+  <fieldset class="form-group" id="case-urgency">
+    <label class="control-label col-sm-3">緊急度:</label>
+    <div class="col-sm-8">
+      <label class="radio-inline" id="low-priority">
+        <input type="radio" name="case-urgency" value="Low Priority" checked />低
+      </label>
+      <label class="radio-inline" id="medium-priority">
+        <input type="radio" name="case-urgency" value="Medium Priority" />中
+      </label>
+      <label class="radio-inline" id="high-priority">
+        <input type="radio" name="case-urgency" value="High Priority" />高
+      </label>
+      <label class="radio-inline" id="critical-priority">
+        <input type="radio" name="case-urgency" value="Critical Priority" />クリティカル
+      </label>
+    </div>
+  </fieldset>
+
+  <div class="popover_content hidden" id="medium-priority-content">
+    <ul class="list list-bullet list-nospace">
+      <li>Major Trend Micro software or service function impaired but operational.</li>
+      <li>Minor Trend Micro product or service component function not working as documented.</li>
+      <li>Medium to low business impact.</li>
+      <li>Workaround available.</li>
+    </ul>
+  </div>
+
+  <div class="popover_content hidden" id="high-priority-content">
+    <ul class="list list-bullet list-nospace">
+      <li>Issues where major Trend Micro product or service components are rendered inoperable.</li>
+      <li>Critical impact to business operations.</li>
+      <li>No workaround available.</li>
+      <li>Around-the-clock Customer and Trend Micro commitment to address the incident.</li>
+    </ul>
+  </div>
+
+  <div class="popover_content hidden" id="critical-priority-content">
+    <ul class="list list-bullet list-nospace">
+      <li>Issues where major Trend Micro product or service components are rendered inoperable.</li>
+      <li>Critical impact to business operations.</li>
+      <li>No workaround available.</li>
+      <li>Around-the-clock Customer and Trend Micro commitment to address the incident.</li>
+    </ul>
+  </div>
+
+  <!-- <fieldset class="form-group form-required" id="business-impact">
+    <label class="control-label col-sm-3">ビジネスへの影響:</label>
+    <div class="col-sm-8">
+      <textarea class="form-control"></textarea>
+    </div>
+  </fieldset> -->
+
+  <!-- <fieldset class="form-group" id="critical-business-impact">
+    <div class="col-sm-8 col-sm-offset-3">
+      <div class="checkbox">
+        <label><input type="checkbox" name="critical-business-impact" value="">This significantly impacts my business operations.</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="critical-business-impact" value="">I have after-hours resource available to work with Trend Micro, if necessary</label>
+      </div>
+    </div>
+  </fieldset> -->
+
+  <fieldset class="form-group">
+    <label class="control-label col-sm-3">ケースを共有するEメール:</label>
+    <div class="col-sm-8">
+      <textarea class="form-control"></textarea>
+      <div class="help-block">
+        Enter one email per line or <a href="#contact-list-modal" data-toggle="modal">select recipients from Contact list</a>
+      </div>
+    </div>
+  </fieldset>
+
+  <hr class="dashed">
+
+  <fieldset class="form-group">
+    <div class="col-xs-offset-0 col-sm-9 col-sm-offset-3">
+      <button type="submit" class="btn btn-primary btn-lg btn-block-xs">登録</button>
+      <button type="submit" class="btn btn-link btn-lg btn-block-xs">Cancel</button>
+    </div>
+  </fieldset>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+<!-- Start! Product Profile -->
+<div class="modal fade" id="product-profile-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title">製品プロフィールの追加・修正</h6>
+        <p class="modal-subtitle">Please ensure the product information are updated. If not, you may edit the fields here.</p>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <p><strong>Step 1: Select a product profile to edit, or add a new one</strong></p>
+
+          <div class="well well-default">
+            <div class="form-group">
+              <label class="control-label">Product Profile:</label>
+              <div class="row">
+                <div class="col-md-8">
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="Premium Support - Diamond">Premium Support - Diamond</option>
+                    <option value="Premium Support - Gold">Premium Support - Gold</option>
+                    <option value="Premium Support - Silver">Premium Support - Silver</option>
+                    <option value="Professional Support Service - Deep Security">Professional Support Service - Deep Security</option>
+                    <option value="Technical Account Management Services - Diamond">Technical Account Management Services - Diamond</option>
+                    <option value="TPS for ENT Content Security Diamond Add-On">TPS for ENT Content Security Diamond Add-On</option>
+                    <option value="TPS for ENT Content Security Diamond Base">TPS for ENT Content Security Diamond Base</option>
+                    <option value="TPS for ENT Content Security Gold Add-On">TPS for ENT Content Security Gold Add-On</option>
+                    <option value="TPS for ENT Content Security Gold Base">TPS for ENT Content Security Gold Base</option>
+                    <option value="TPS for ENT Content Security Silver Add-On">TPS for ENT Content Security Silver Add-On</option>
+                    <option value="TPS for ENT Content Security Silver Base">TPS for ENT Content Security Silver Base</option>
+                    <option value="TPS for ENT Server Security Gold Add-On">TPS for ENT Server Security Gold Add-On</option>
+                    <option value="TPS for ENT Server Security Gold Base">TPS for ENT Server Security Gold Base</option>
+                    <option value="TPS for ENT Server Security Silver Add-On">TPS for ENT Server Security Silver Add-On</option>
+                    <option value="TPS for ENT Server Security Silver Base">TPS for ENT Server Security Silver Base</option>
+                    <option value="TPS for ENT Threat Management Diamond Base">TPS for ENT Threat Management Diamond Base</option>
+                    <option value="TPS for ENT Threat Management Gold Add-On">TPS for ENT Threat Management Gold Add-On</option>
+                    <option value="TPS for ENT Threat Management Gold Base">TPS for ENT Threat Management Gold Base</option>
+                    <option value="TPS for ENT Threat Management Silver Add-On">TPS for ENT Threat Management Silver Add-On</option>
+                    <option value="TPS for ENT Threat Management Silver Base">TPS for ENT Threat Management Silver Base</option>
+                    <option value="TPS for Partner Content Security Diamond Base">TPS for Partner Content Security Diamond Base</option>
+                    <option value="TPS for Partner Content Security Gold Base">TPS for Partner Content Security Gold Base</option>
+                    <option value="TPS for Partner Content Security Silver Base">TPS for Partner Content Security Silver Base</option>
+                    <option value="TPS for Partner Server Security Gold Add-On">TPS for Partner Server Security Gold Add-On</option>
+                    <option value="TPS for Partner Server Security Gold Base">TPS for Partner Server Security Gold Base</option>
+                    <option value="TPS for Partner Server Security Silver Base">TPS for Partner Server Security Silver Base</option>
+                    <option value="TPS for Partner Threat Management Gold Base">TPS for Partner Threat Management Gold Base</option>
+                    <option value="TPS for Partner Threat Management Silver Base">TPS for Partner Threat Management Silver Base</option>
+                    <option value="Trend Micro Availability Service">Trend Micro Availability Service</option>
+                    <option value="Trend Micro Availability Service Lite 24">Trend Micro Availability Service Lite 24</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <a href="" class="btn btn-link btn-block" id="add-new-product-profile"><i class="fa fa-plus fa-right"></i>Add a New Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="product-profile-details">
+            <p><strong>Step 2: Edit the information for the selected or new product profile</strong></p>
+
+            <div class="well well-default">
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label class="control-label">Profile Name:</label>
+                  <input type="text" class="form-control" placeholder="Profile Name" />
+                </div>
+
+                <div class="form-group col-md-6 pull-right">
+                  <label class="control-label">Operating System <small>(Select all appropriate)</small>:</label>
+                  <textarea class="form-control" style="height: 192px;"></textarea>
+                  <!-- <select class="form-control chosen-select" multiple>
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="Windows 2003 32-Bit">Windows 2003 32-Bit</option>
+                    <option value="Windows 2003 64-Bit">Windows 2003 64-Bit</option>
+                    <option value="Windows 2008 32-Bit">Windows 2008 32-Bit</option>
+                    <option value="Windows 2008 64-Bit">Windows 2008 64-Bit</option>
+                    <option value="Windows Server 2012 64-Bit">Windows Server 2012 64-Bit</option>
+                    <option value="Windows 2003 32-Bit">Windows 2003 32-Bit</option>
+                    <option value="Windows 2003 64-Bit">Windows 2003 64-Bit</option>
+                    <option value="Windows 2008 32-Bit">Windows 2008 32-Bit</option>
+                    <option value="Windows 2008 64-Bit">Windows 2008 64-Bit</option>
+                    <option value="Windows Server 2012 64-Bit">Windows Server 2012 64-Bit</option>
+                  </select> -->
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="control-label">Product:</label>
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <optgroup label="Account Product Assets">
+                      <option value="Cloud App Security">Cloud App Security</option>
+                      <option value="Control Manager">Control Manager</option>
+                      <option value="Deep Security As A Service">Deep Security As A Service</option>
+                      <option value="Endpoint Application Control">Endpoint Application Control</option>
+                      <option value="Endpoint Encryption">Endpoint Encryption</option>
+                      <option value="Endpoint Security Platform">Endpoint Security Platform</option>
+                      <option value="Hosted Email Security">Hosted Email Security</option>
+                      <option value="Hosted Email Security">Hosted Email Security</option>
+                      <option value="Instant Messaging Security">Instant Messaging Security</option>
+                      <option value="Interscan Messaging Security">Interscan Messaging Security</option>
+                      <option value="Interscan Web Security As A Service">Interscan Web Security As A Service</option>
+                      <option value="Interscan Web Security Virtual Appliance">Interscan Web Security Virtual Appliance</option>
+                      <option value="Mobile Security For Enterprise">Mobile Security For Enterprise</option>
+                      <option value="OfficeScan">OfficeScan</option>
+                      <option value="Officescan Plug-In - Data Protection">Officescan Plug-In - Data Protection</option>
+                      <option value="Portalprotect">Portalprotect</option>
+                      <option value="Scanmail For Exchange">Scanmail For Exchange</option>
+                      <option value="Scanmail For Ibm Domino">Scanmail For Ibm Domino</option>
+                      <option value="Scanmail For Lotus Domino">Scanmail For Lotus Domino</option>
+                      <option value="Security For Macintosh">Security For Macintosh</option>
+                      <option value="ServerProtect">ServerProtect</option>
+                      <option value="ServerProtect For Linux">ServerProtect For Linux</option>
+                      <option value="Smart Protection Complete">Smart Protection Complete</option>
+                      <option value="Smart Protection For Endpoints">Smart Protection For Endpoints</option>
+                      <option value="Support Entitlements">Support Entitlements</option>
+                      <option value="Tm_Unmapped_Gic_Product_Id">Tm_Unmapped_Gic_Product_Id</option>
+                      <option value="Virtual Desktop Infrastructure">Virtual Desktop Infrastructure</option>
+                      <option value="Vulnerability Protection">Vulnerability Protection</option>
+                      <option value="Worry-Free Business Security Advanced">Worry-Free Business Security Advanced</option>
+                      <option value="Worry-Free Business Security Services">Worry-Free Business Security Services</option>
+                      <option value="Worry-Free Business Security Standard">Worry-Free Business Security Standard</option>
+                    </optgroup>
+                    <optgroup label="Other Products">
+                      <option value="ARM For Interscan Web Security">ARM For Interscan Web Security</option>
+                      <option value="Cisco CSC Security Services Module">Cisco CSC Security Services Module</option>
+                      <option value="Cisco Protectlink">Cisco Protectlink</option>
+                      <option value="Client Licensing Platform">Client Licensing Platform</option>
+                      <option value="Cloud App Security For Office 365">Cloud App Security For Office 365</option>
+                      <option value="Cloud Application Control">Cloud Application Control</option>
+                      <option value="Cloud Edge">Cloud Edge</option>
+                      <option value="Control Manager">Control Manager</option>
+                      <option value="Control Manager As A Service">Control Manager As A Service</option>
+                      <option value="Core Protection Module - ESP">Core Protection Module - ESP</option>
+                      <option value="Core Protection Module For MAC">Core Protection Module For MAC</option>
+                      <option value="Damage Cleanup Services">Damage Cleanup Services</option>
+                      <option value="Data Loss Prevention Endpoint">Data Loss Prevention Endpoint</option>
+                      <option value="Data Loss Prevention Network Monitor">Data Loss Prevention Network Monitor</option>
+                      <option value="Deep Discovery Advisor">Deep Discovery Advisor</option>
+                      <option value="Deep Discovery Analyzer">Deep Discovery Analyzer</option>
+                      <option value="Deep Discovery App for Splunk">Deep Discovery App for Splunk</option>
+                      <option value="Deep Discovery Email Inspector">Deep Discovery Email Inspector</option>
+                      <option value="Deep Discovery Endpoint Sensor">Deep Discovery Endpoint Sensor</option>
+                      <option value="Deep Discovery Inspector">Deep Discovery Inspector</option>
+                      <option value="Deep Edge">Deep Edge</option>
+                      <option value="Deep Security">Deep Security</option>
+                      <option value="Deep Security As A Service">Deep Security As A Service</option>
+                      <option value="Deep Security For Web Apps">Deep Security For Web Apps</option>
+                      <option value="Email Encryption Gateway">Email Encryption Gateway</option>
+                      <option value="Email Encryption Hosted">Email Encryption Hosted</option>
+                      <option value="Email Reputation Services">Email Reputation Services</option>
+                      <option value="EMSP-SP White Label">EMSP-SP White Label</option>
+                      <option value="Encryption For Email">Encryption For Email</option>
+                      <option value="Endpoint Application Control">Endpoint Application Control</option>
+                      <option value="Endpoint Application Control">Endpoint Application Control</option>
+                      <option value="Endpoint Encryption">Endpoint Encryption</option>
+                      <option value="Endpoint Encryption - Data Armor">Endpoint Encryption - Data Armor</option>
+                      <option value="Endpoint Encryption - Key Armor">Endpoint Encryption - Key Armor</option>
+                      <option value="Endpoint Security Platform">Endpoint Security Platform</option>
+                      <option value="Generic Product">Generic Product</option>
+                      <option value="Highly Scalable Anti-Spam Solution">Highly Scalable Anti-Spam Solution</option>
+                      <option value="Hosted Email Security">Hosted Email Security</option>
+                      <option value="Hosted Email Security">Hosted Email Security</option>
+                      <option value="Hosted Mobile Security">Hosted Mobile Security</option>
+                      <option value="Housecall">Housecall</option>
+                      <option value="Housecall Hosted Edition">Housecall Hosted Edition</option>
+                      <option value="IMSVA">IMSVA</option>
+                      <option value="Information Center">Information Center</option>
+                      <option value="Instant Messaging Security">Instant Messaging Security</option>
+                      <option value="Interscan Antivirus For Sendmail">Interscan Antivirus For Sendmail</option>
+                      <option value="Interscan Gateway Security Appliance">Interscan Gateway Security Appliance</option>
+                      <option value="Interscan Messaging Security">Interscan Messaging Security</option>
+                      <option value="Interscan Messaging Security Appliance">Interscan Messaging Security Appliance</option>
+                      <option value="Interscan Viruswall Standard Edition">Interscan Viruswall Standard Edition</option>
+                      <option value="Interscan Web Manager">Interscan Web Manager</option>
+                      <option value="Interscan Web Manager Lite">Interscan Web Manager Lite</option>
+                      <option value="Interscan Web Security As A Service">Interscan Web Security As A Service</option>
+                      <option value="Interscan Web Security Hybrid">Interscan Web Security Hybrid</option>
+                      <option value="Interscan Web Security Suite">Interscan Web Security Suite</option>
+                      <option value="Interscan Web Security Virtual Appliance">Interscan Web Security Virtual Appliance</option>
+                      <option value="InterScan WebManager SCC">InterScan WebManager SCC</option>
+                      <option value="Interscan Webprotect">Interscan Webprotect</option>
+                      <option value="Intrusion Defense Firewall">Intrusion Defense Firewall</option>
+                      <option value="Intrusion Defense Firewall">Intrusion Defense Firewall</option>
+                      <option value="Leakproof">Leakproof</option>
+                      <option value="Licensing Management Platform">Licensing Management Platform</option>
+                      <option value="Messaging Archiver">Messaging Archiver</option>
+                      <option value="Mobile Security For Enterprise">Mobile Security For Enterprise</option>
+                      <option value="Network Viruswall">Network Viruswall</option>
+                      <option value="OfficeScan">OfficeScan</option>
+                      <option value="Officescan Plug-In - Data Protection">Officescan Plug-In - Data Protection</option>
+                      <option value="Officescan Plug-In - Mobile Security">Officescan Plug-In - Mobile Security</option>
+                      <option value="OfficeScan Plug-in - VDI">OfficeScan Plug-in - VDI</option>
+                      <option value="Policy Manager">Policy Manager</option>
+                      <option value="Portable Security">Portable Security</option>
+                      <option value="Portalprotect">Portalprotect</option>
+                      <option value="Power Management">Power Management</option>
+                      <option value="Remote Manager">Remote Manager</option>
+                      <option value="Safe Lock">Safe Lock</option>
+                      <option value="Safe Mobile Workforce">Safe Mobile Workforce</option>
+                      <option value="Safesync For Business">Safesync For Business</option>
+                      <option value="Safesync For Enterprise">Safesync For Enterprise</option>
+                      <option value="Safesync For XSP">Safesync For XSP</option>
+                      <option value="Scanmail For Exchange">Scanmail For Exchange</option>
+                      <option value="Scanmail For Ibm Domino">Scanmail For Ibm Domino</option>
+                      <option value="SDN Adaptor For Nec">SDN Adaptor For Nec</option>
+                      <option value="Securecloud As A Service">Securecloud As A Service</option>
+                      <option value="Securecloud On Premise">Securecloud On Premise</option>
+                      <option value="Security For Macintosh">Security For Macintosh</option>
+                      <option value="ServerProtect">ServerProtect</option>
+                      <option value="ServerProtect For EMC Celerra">ServerProtect For EMC Celerra</option>
+                      <option value="ServerProtect For Linux">ServerProtect For Linux</option>
+                      <option value="ServerProtect For Storage">ServerProtect For Storage</option>
+                      <option value="Smart Protection Complete">Smart Protection Complete</option>
+                      <option value="Smart Protection For Endpoints">Smart Protection For Endpoints</option>
+                      <option value="Smart Protection Server">Smart Protection Server</option>
+                      <option value="SSL">SSL</option>
+                      <option value="Storage Security For Eternus DX Series">Storage Security For Eternus DX Series</option>
+                      <option value="Threat Discovery Appliance">Threat Discovery Appliance</option>
+                      <option value="Threat Intelligence Manager">Threat Intelligence Manager</option>
+                      <option value="Threat Management Agent">Threat Management Agent</option>
+                      <option value="Threat Management Service Portal">Threat Management Service Portal</option>
+                      <option value="Threat Mitigator">Threat Mitigator</option>
+                      <option value="TippingPoint Advanced Threat Protection for Networks">TippingPoint Advanced Threat Protection for Networks</option>
+                      <option value="Titanium Internet Security For Mac">Titanium Internet Security For Mac</option>
+                      <option value="Titanium Maximum Security">Titanium Maximum Security</option>
+                      <option value="Virtual Desktop Infrastructure">Virtual Desktop Infrastructure</option>
+                      <option value="Virusbuster Cloud">Virusbuster Cloud</option>
+                      <option value="Vsapi Virus Scan Engine">Vsapi Virus Scan Engine</option>
+                      <option value="Vulnerability Management Services">Vulnerability Management Services</option>
+                      <option value="Vulnerability Protection">Vulnerability Protection</option>
+                      <option value="Web Security For Yamaha Router">Web Security For Yamaha Router</option>
+                      <option value="Worry Free Services for Dell">Worry Free Services for Dell</option>
+                      <option value="Worry-Free Business Security Advanced">Worry-Free Business Security Advanced</option>
+                      <option value="Worry-Free Business Security Services">Worry-Free Business Security Services</option>
+                      <option value="Worry-Free Business Security Standard">Worry-Free Business Security Standard</option>
+                      <option value="Worry-Free Plug-In - Security For MAC">Worry-Free Plug-In - Security For MAC</option>
+                      <option value="Worry-Free Remote Manager">Worry-Free Remote Manager</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label class="control-label">Product Version:</label>
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="11.0">11.0</option>
+                    <option value="10.6">10.6</option>
+                    <option value="10.5">10.5</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label class="control-label">Product Language:</label>
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="English">English</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Polish">Polish</option>
+                    <option value="Portuguese">Portuguese</option>
+                    <option value="Russian">Russian</option>
+                    <option value="Simplified Chinese">Simplified Chinese</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="Traditional Chinese">Traditional Chinese</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-12">
+                  <label class="control-label">Product Activation Code:</label>
+                  <select class="form-control">
+                    <option value="0" selected disabled>Select...</option>
+                    <option value="OS-YZET-J8Y79-ALQUE-ZQPV8-2A7U9-HRZ4F">OS-YZET-J8Y79-ALQUE-ZQPV8-2A7U9-HRZ4F</option>
+                    <option value="EI-84Y5-YY74W-7QFFM-ZLJGS-6N4DC-ZARHQ">EI-84Y5-YY74W-7QFFM-ZLJGS-6N4DC-ZARHQ</option>
+                    <option value="OS-EMX2-V696V-CKCVS-XXLXB-9FLKT-FEY2L">OS-EMX2-V696V-CKCVS-XXLXB-9FLKT-FEY2L</option>
+                    <option value="OS-696N-M4WGB-BELL4-WAVX9-7XYKT-Q8BEF">OS-696N-M4WGB-BELL4-WAVX9-7XYKT-Q8BEF</option>
+                    <option value="OS-93EM-RCW73-RBE4D-NRDY5-AZVBF-752GC">OS-93EM-RCW73-RBE4D-NRDY5-AZVBF-752GC</option>
+                    <option value="OS-AZTL-X2A78-RWWY2-KLHTX-77CPM-XHELP">OS-AZTL-X2A78-RWWY2-KLHTX-77CPM-XHELP</option>
+                    <option value="OS-BGMF-GWFT3-Y4KYZ-8X4QJ-H7XEY-ZGJHQ">OS-BGMF-GWFT3-Y4KYZ-8X4QJ-H7XEY-ZGJHQ</option>
+                    <option value="OS-HRYY-U6YED-6ZXMP-FHK43-3Y4PH-RCYNQ">OS-HRYY-U6YED-6ZXMP-FHK43-3Y4PH-RCYNQ</option>
+                    <option value="OS-J4RD-AWUPC-N3K3L-PYMAK-TGWV8-ZFDBN">OS-J4RD-AWUPC-N3K3L-PYMAK-TGWV8-ZFDBN</option>
+                    <option value="EI-QE6V-7WZQV-8FETC-R6X9N-LWGLM-VAK8C">EI-QE6V-7WZQV-8FETC-R6X9N-LWGLM-VAK8C</option>
+                    <option value="OS-U88F-L8976-7PXTX-SUDPM-U6KP4-UC35G">OS-U88F-L8976-7PXTX-SUDPM-U6KP4-UC35G</option>
+                    <option value="OS-EHPK-ASP57-QFVA6-VV953-HZPL4-P6JFJ">OS-EHPK-ASP57-QFVA6-VV953-HZPL4-P6JFJ</option>
+                    <option value="OS-TP95-M6YB2-L595G-J7U79-5BT9E-J2PDE">OS-TP95-M6YB2-L595G-J7U79-5BT9E-J2PDE</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label class="control-label">Virus Pattern Type:</label>
+                  <div class="radio">
+                    <label><input type="radio" name="virus-pattern" value="conventional" checked>Conventional Pattern</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="virus-pattern" value="smart-scan">Smart Scan Pattern</label>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <div class="checkbox">
+                    <label><input type="checkbox">Behavior Monitoring</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-info btn-sm" type="button">Save Profile</button>
+        <button class="btn btn-link btn-sm" data-dismiss="modal" type="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End! Product Profile -->
+
+<!-- Start! Category Description -->
+<div class="modal fade" id="category-description-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title">各カテゴリの説明</h6>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs nav-tabs-one nav-justified nav-sm">
+          <li class="active"><a href="#product" data-toggle="tab" >Product Issue</a></li>
+          <li><a href="#virus-threat" data-toggle="tab" >Virus &amp; Malware Issues</a></li>
+        </ul>
+        <div class="tab-content scroll-box">
+          <div class="tab-pane fade in active" id="product">
+            <dl class="list list-definition">
+
+              <dt>Appliance Hardware</dt>
+              <dd>For hardware-related issues affecting a Trend Micro appliance product (ie. Network Viruswall, Interscan Gateway Security Appliance, Interscan Messaging Appliance, etc.</dd>
+
+              <dt>Configuration</dt>
+              <dd>Issues relating to setting up and enabling a functionality of a product like Realtime scanning, notification, Firewalls, and etc.</dd>
+
+              <dt>Installation</dt>
+              <dd>Problems installing the entire product or a component of a product.</dd>
+
+              <dt>Online Account Administration</dt>
+              <dd>Issues on enabling or disabling access to an online account.</dd>
+
+              <dt>Performance (i.e. System Slow-Down or High CPU)</dt>
+              <dd>Degradation or poor system performance after enabling a function or installing the product.</dd>
+
+              <dt>System Crash</dt>
+              <dd>Crash, hang, Blue-screen-of-Death (BSOD), ABEND, Core Dump, etc. after installing a component, enabling a feature, or installing the product.</dd>
+
+              <dt>Uninstall</dt>
+              <dd>Problems removing a component or the entire product from the system.</dd>
+
+              <dt>Update or Rollback</dt>
+              <dd>Issues related to component updates and rollback such as pattern and scan engine update failures.</dd>
+
+              <dt>User Interface Defects or Documentation Questions</dt>
+              <dd>Management Console or Client-side console problems and product documentation (Installation Guide, Administrator Guide, or Online Help concerns.</dd>
+
+              <dt>Other Product Related Questions</dt>
+              <dd>Other technical concerns that do not fall within the above categories.</dd>
+
+            </dl>
+          </div>
+          <div class="tab-pane fade" id="virus-threat">
+            <dl class="list list-definition">
+
+              <dt>Spam</dt>
+              <dd>Request to analyze a valid email that was tagged as SPAM or request to tag an email as SPAM.</dd>
+
+
+              <dt>Virus False Alarm</dt>
+              <dd>Report that a clean file was detected as malicious.</dd>
+
+              <dt>Malware detected but clean failed</dt>
+              <dd>The file was detected but was not cleaned or quarantined.</dd>
+
+              <dt>URL Reclassification</dt>
+              <dd>Request re-validation of a blocked website or URL.</dd>
+
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End! Category Description -->
+
+<!-- Start! URL Reclassification -->
+<div class="modal fade" id="url-reclassification-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title">Select Classification</h6>
+      </div>
+      <div class="modal-body">
+
+        <ul class="nav nav-tabs nav-tabs-one nav-justified nav-sm">
+          <li class="active"><a href="#adult" data-toggle="tab">Adult</a></li>
+          <li><a href="#business" data-toggle="tab">Business</a></li>
+          <li><a href="#communication-and-search" data-toggle="tab">Communication and Search</a></li>
+          <li><a href="#general" data-toggle="tab">General</a></li>
+          <li><a href="#internet-security" data-toggle="tab">Internet Security</a></li>
+          <li><a href="#lifestyle" data-toggle="tab">Lifestyle</a></li>
+          <li><a href="#network-bandwidth" data-toggle="tab">Network Bandwidth</a></li>
+        </ul>
+
+        <div class="tab-content scroll-box">
+
+          <div class="tab-pane fade in active" id="adult">
+
+            <h3 class="tab-header display-5">Adult</h3>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="" checked="">Abortion
+                <div class="small text-muted">Sites that promote, encourage, or discuss abortion, including sites that cover moral or political views on abortion</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Adult / Mature Content
+                <div class="small text-muted">Sites with profane or vulgar content generally considered inappropriate for minors; includes sites that offer erotic content or ads for sexual services, but excludes sites with sexually explicit images</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Alcohol / Tobacco
+                <div class="small text-muted">Sites that promote, sell, or provide information about alcohol or tobacco products</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Gambling
+                <div class="small text-muted">Sites that promote or provide information on gambling, including online gambling sites</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Illegal / Questionable
+                <div class="small text-muted">Sites that promote and discuss how to perpetrate nonviolent crimes, including burglary, fraud, intellectual property theft, and plagiarism; includes sites that sell plagiarized or stolen materials</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Illegal Drugs
+                <div class="small text-muted">Sites that promote, glamorize, supply, sell, or explain how to use illicit or illegal intoxicants</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Illegal or Prohibited Content
+                <div class="small text-muted">Sites that provide information about or software for sharing and transferring pages related to illegal or prohibited content in international law.</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Intimate Apparel / Swimsuit
+                <div class="small text-muted">Sites that sell swimsuits or intimate apparel with images of models wearing them</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Marijuana
+                <div class="small text-muted">Sites that discuss the cultivation, use, or preparation of marijuana, or sell related paraphernalia</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Nudity
+                <div class="small text-muted">Sites showing nude or partially nude images that are generally considered artistic, not vulgar or pornographic</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Pornography
+                <div class="small text-muted">Sites with sexually explicit imagery designed for sexual arousal, including sites that offer sexual services</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Sex Education
+                <div class="small text-muted">Sites with or without explicit images that discuss reproduction, sexuality, birth control, sexually transmitted disease, safe sex, or coping with sexual trauma</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Tasteless
+                <div class="small text-muted">Sites with content that is gratuitously offensive and shocking; includes sites that show extreme forms of body modification or mutilation and animal cruelty</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Violence / Hate / Racism
+                <div class="small text-muted">Sites that promote hate and violence; includes sites that espouse prejudice against a social group, extremely violent and dangerous activities, mutilation and gore, or the creation of destructive devices</div>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Weapons
+                <div class="small text-muted">Sites about weapons, including their accessories and use; excludes sites about military institutions or sites that discuss weapons as sporting or recreational equipment</div>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="business">
+
+            <h3 class="tab-header display-5">Business</h3>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Auctions
+                <div class="small text-muted">Sites that serve as venues for selling or buying goods through bidding, including business sites that are being auctioned</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Brokerages / Trading
+                <div class="small text-muted">Sites about investments in stocks or bonds, including online trading sites; includes sites about vehicle insurance</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Business / Economy
+                <div class="small text-muted">Sites about business and the economy, including entrepreneurship and marketing; includes corporate sites that do not fall under other categories</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Financial Services
+                <div class="small text-muted">Sites that provide information about or offer basic financial services, including sites owned by businesses in the financial industry</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Job Search / Careers
+                <div class="small text-muted">Sites about finding employment or employment services</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Real Estate
+                <div class="small text-muted">Sites about real estate, including those that provide assistance selling, leasing, purchasing, or renting property</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Shopping
+                <div class="small text-muted">Sites that sell goods or support the sales of goods that do not fall under other categories; excludes online auction or bidding sites</div>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="communication-and-search">
+
+            <h3 class="tab-header display-5">Communication and Search</h3>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Blogs / Web Communications
+                <div class="small text-muted">Blog sites or forums on varying topics or topics not covered by other categories; sites that offer multiple types of Web-based communication, such as email or instant messaging</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Chat / Instant Messaging
+                <div class="small text-muted">Sites that provide Web-based services or downloadable software for text-based instant messaging or chat</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Email
+                <div class="small text-muted">Sites that provide email services, including portals used by companies for Web-based email</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Internet Infrastructure
+                <div class="small text-muted">Content servers, image servers, or sites used to gather, process, and present data and data analysis, including Web analytics tools and network monitors</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Internet Telephony
+                <div class="small text-muted">Sites that provide Web services or downloadable software for Voice over Internet Protocol (VoIP) calls</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Newsgroups / Forum
+                <div class="small text-muted">Sites that offer access to Usenet or provide other newsgroup, forum, or bulletin board services</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Search Engines / Portals
+                <div class="small text-muted">Search engine sites or portals that provide directories, indexes, or other retrieval systems for the Web</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Social Networking
+                <div class="small text-muted">Sites devoted to personal expression or communication, linking people with similar interests</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Web Hosting
+                <div class="small text-muted">Sites of organizations that provide top-level domains or Web hosting services</div>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="general">
+
+            <h3 class="tab-header display-5">General</h3>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Computers / Internet
+                <div class="small text-muted">Sites about computers, the Internet, or related technology, including sites that sell or provide reviews of electronic devices</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Education
+                <div class="small text-muted">School sites, distance learning sites, and other education-related sites</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Government / Legal
+                <div class="small text-muted">Sites about the government, including laws or policies; excludes government military or health sites</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Health
+                <div class="small text-muted">Sites about health, fitness, or well-being</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Military
+                <div class="small text-muted">Sites about military institutions or armed forces; excludes sites that discuss or sell weapons or military equipment</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">News / Media
+                <div class="small text-muted">Sites about the news, current events, contemporary issues, or the weather; includes online magazines whose topics do not fall under other categories</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Politics
+                <div class="small text-muted">Sites that discuss or are sponsored by political parties, interest groups, or similar organizations involved in public policy issues; includes non-hate sites that discuss conspiracy theories or alternative views on government</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Reference
+                <div class="small text-muted">General and specialized reference sites, including map, encyclopedia, dictionary, weather, how-to, and conversion sites</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Translators / Cached Pages
+                <div class="small text-muted">Online page translators or cached Web pages (used by search engines), which can be used to circumvent proxy servers and Web filtering systems</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Untested
+                <div class="small text-muted">Sites that have not been classified under a category</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Vehicles
+                <div class="small text-muted">Sites about motorized transport, including customization, procurement of parts and actual vehicles, or repair services; excludes sites about military vehicles</div>
+              </label>
+            </div>
+
+          </div>
+
+
+          <div class="tab-pane fade" id="internet-security">
+
+            <h3 class="tab-header display-5">Internet Security</h3>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Adware
+                <div class="small text-muted">Sites with downloads that display advertisements or other promotional content; includes sites that install browser helper objects (BHOs)</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">C&amp;C Server
+                <div class="small text-muted">Servers/Repositories that harbor command-and-control (C&amp;C) servers and dropzones</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Cookies
+                <div class="small text-muted">Sites that send malicious tracking cookies to visiting Web browsers</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Dialers
+                <div class="small text-muted">Sites with downloads that dial into other networks or premium-rate telephone numbers without user consent</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Disease Vector
+                <div class="small text-muted">Sites that directly or indirectly facilitate the distribution of malicious software or source code</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Emerging Malware
+                <div class="small text-muted">Sites that directly or indirectly facilitate the distribution of ransomware and other emerging types of malware</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Hacking
+                <div class="small text-muted">Sites that provide software for bypassing computer security systems</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Joke Program
+                <div class="small text-muted">Sites that provide downloadable "joke" software, including applications that can unsettle users</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Made for AdSense
+                <div class="small text-muted">Sites that use scraped or copied content to pollute search engines with redundant and generally unwanted results</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Malicious Domain
+                <div class="small text-muted">Domains that host malicious payloads; such domains cannot be reclassified.</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Malware Accomplice
+                <div class="small text-muted">Sites used by malicious programs, including sites used to host upgrades or store stolen information</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">New Domain
+                <div class="small text-muted">Newly-detected domains (for example, throwaway domains); domains that have not been classified by Trend Micro</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Password Cracking
+                <div class="small text-muted">Sites that distribute password cracking software</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Phishing
+                <div class="small text-muted">Fraudulent sites that mimic legitimate sites to gather sensitive information, such as user names and passwords</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Proxy Avoidance
+                <div class="small text-muted">Sites about bypassing proxy servers or Web filtering systems, including sites that provide tools for that purpose</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Remote Access Program
+                <div class="small text-muted">Sites that provide tools for remotely monitoring and controlling computers</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Scam
+                <div class="small text-muted">Sites that attempt to defraud a person or group after first gaining their confidence, used in the classical sense of trust. They often play confidence tricks to exploit typical human characteristics such as greed, dishonesty, vanity, opportunism, lust, compassion, credulity, irresponsibility, desperation, and naivety</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Spam
+                <div class="small text-muted">Sites whose addresses have been found in spam messages</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Spyware
+                <div class="small text-muted">Sites with downloads that gather and transmit data from computers owned by unsuspecting users</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Web Advertisements
+                <div class="small text-muted">Sites dedicated to displaying advertisements, including sites used to display banner or popup ads</div>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="lifestyle">
+
+            <h3 class="tab-header display-5">Lifestyle</h3>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Activist Groups
+                <div class="small text-muted">Sites that promote change in public policy, public opinion, social practice, economic activities, or economic relationships; includes sites controlled by service, philanthropic, professional, or labor organizations</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Alternative Journals
+                <div class="small text-muted">Online equivalents of supermarket tabloids and other fringe publications</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Arts
+                <div class="small text-muted">Sites about the visual arts, such as painting and sculpture</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Cult / Occult
+                <div class="small text-muted">Sites about alternative religions, beliefs, and religious practices, including those considered cult or occult</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label
+                <input name="url-classification" type="radio" value="">Cultural Institutions
+                <div class="small text-muted">Sites controlled by organizations that seek to preserve cultural heritage, such as libraries or museums; also covers sites owned by the Boy Scouts, the Girl Scouts, Rotary International, and similar organizations</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Entertainment
+                <div class="small text-muted">Sites that promote or provide information about movies, music, non-news radio and television, books, or magazines</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">For Kids
+                <div class="small text-muted">Sites designed for children</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Games
+                <div class="small text-muted">Sites about board games, card games, console games, or computer games; includes sites that sell games or related merchandise</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Gun Clubs / Hunting
+                <div class="small text-muted">Sites about gun clubs or similar groups; includes sites about hunting, war gaming, or paintball facilities</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Humor
+                <div class="small text-muted">Sites intended for humor</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Personal Sites
+                <div class="small text-muted">Sites maintained by individuals about themselves or their interests; excludes personal pages in social networking sites, blog sites, or similar services</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Personals / Dating
+                <div class="small text-muted">Sites that help visitors establish relationships, including sites that provide singles listings, matchmaking, or dating services</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Recreation / Hobbies
+                <div class="small text-muted">Sites about recreational activities and hobbies, such as collecting, gardening, outdoor activities, traditional (non-video) games, and crafts; includes sites about pets, recreational facilities, or recreational organizations</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Religion
+                <div class="small text-muted">Sites about popular religions, their practices, or their places of worship</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Restaurants / Food
+                <div class="small text-muted">Sites that list, review, discuss, advertise, or promote food, catering, dining services, cooking, or recipes</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Society / Lifestyle
+                <div class="small text-muted">Sites that provide information about life or daily matters; excludes sites about entertainment, hobbies, sex, or sports, but includes sites about cosmetics or fashion</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Sports
+                <div class="small text-muted">Sites about sports or other competitive physical activities; includes fan sites or sites that sell sports merchandise</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Travel
+                <div class="small text-muted">Sites about travelling or travel destinations; includes travel booking and planning sites</div>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="network-bandwidth">
+
+            <h3 class="tab-header display-5">Network Bandwidth</h3>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Internet Radio and TV
+                <div class="small text-muted">Sites that primarily provide streaming radio or TV programming; excludes sites that provide other kinds of streaming content</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Pay to Surf
+                <div class="small text-muted">Sites that compensate users who view certain Web sites, email messages, or advertisements or users who click links or respond to surveys</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Peer-to-peer
+                <div class="small text-muted">Sites that provide information about or software for sharing and transferring files within a peer-to-peer (P2P) network</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Photo Searches
+                <div class="small text-muted">Sites that primarily host images, allowing users to share, organize, store, or search for photos or other images</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Ringtones / Mobile Phone Downloads
+                <div class="small text-muted">Sites that provide content for mobile devices, including ringtones, games, or videos</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Sharing Services
+                <div class="small text-muted">Sites that enable sharing of files and other content</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Software Downloads
+                <div class="small text-muted">Sites dedicated to providing free, trial, or paid software downloads</div>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input name="url-classification" type="radio" value="">Streaming Media / MP3
+                <div class="small text-muted">Sites that offer streaming video or audio content without radio or TV programming; sites that provide music or video downloads, such as MP3 or AVI files</div>
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-info btn-sm" type="button">Select New Classification</button>
+        <button class="btn btn-link btn-sm" data-dismiss="modal" type="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End! URl Reclassification -->
+
+<!-- Start! Contact List -->
+<div class="modal fade" id="contact-list-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title">Select from Contact List</h6>
+      </div>
+      <div class="modal-body">
+        <div class="panel panel-default" id="contact-list">
+          <table class="table table-hover table-scrollable table-togglecheckbox">
+            <thead>
+              <tr>
+                <th><input type="checkbox" data-select="selectall"></th>
+                <th>Contact List</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>bbyod332_mark@mail.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>GraceTest1215@test.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>gracetest@gmail.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>grace_adavan1@trendmicro.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>grace_adavan2@trendmicro.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>joy_maniago@trendmicro.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>mark111222@gmail.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>mark345@gmail.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>nbr1234567@mailer.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>nbr12345@mailer.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>number@yahoo.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>Phonemapping@yahoo.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>tmjennyshieh@gmail.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>tmstandardcustomer@gmail.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>trendbaux+kmstandard@gmail.com</td></tr>
+              <tr><td><input type="checkbox" data-toggle="checkbox"></td><td>trendbaux+nonpsp02@gmail.com</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-info btn-sm" type="button">Add Selected Recipients</button>
+        <button class="btn btn-link btn-sm" data-dismiss="modal" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End! Contact List -->

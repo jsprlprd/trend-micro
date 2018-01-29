@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% include _en-us/global/meta-data.html %}
+    <title>{{ page.meta-title }} | Trend Micro</title>
+    <!-- Place this data between the <head> tags of your website -->
+    <meta name="description" content="Get technical support for Trend Micro products using self-help solutions, video guides, documentations, discussion forums, and premium assisted support service." />
+
+    <!-- Twitter Card data -->
+    <!-- <meta name="twitter:card" value="summary"> -->
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Trend Micro Business Support" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ site.baseurl }}/en-us/business/" />
+    <meta property="og:image" content="assets/images/support-for-business.png" />
+    <meta property="og:description" content="Get technical support for Trend Micro products using self-help solutions, video guides, documentations, discussion forums, and premium assisted support service." />
+    {% include _en-us/global/favicon.html %}
+    {% include _en-us/global/stylesheet.html %}
+
+  </head>
+
+  <body data-spy="scroll" data-target="#sidebar-nav" data-offset="250">
+
+    <span style="{% if page.url contains '/en-us/tls-error.html' %} display: none; {% endif %}">
+      {% include _en-us/components/header.html %}
+    </span>
+
+    <span class="hidden-md hidden-lg" style="{% if
+      page.url contains '/en-us/business-support.html' or
+      page.url contains '/en-us/search-result.html'
+    %} display: block !important; {% endif %}
+
+    {% if
+      page.url contains '/en-us/product-support/office-scan.html' or
+      page.url contains '/en-us/product-support/deep-security.html'
+    %} display: none; {% endif %}">
+      {% include _en-us/components/search.html %}
+    </span>
+
+    <span style="display: none; {% if
+      page.url contains '/en-us/business-support.html' or
+      page.url contains '/en-us/esupport/technical-support.html' or
+      page.url contains '/en-us/esupport/virus-and-threat-help.html' or
+      page.url contains '/en-us/esupport/renewals-and-registration.html' or
+      page.url contains '/en-us/contact-support/asia-pacific.html' or
+      page.url contains '/en-us/product-support/office-scan.html' or
+      page.url contains '/en-us/product-support/deep-security.html'
+    %}
+      display: block !important;
+    {% endif %}">
+      {% include _en-us/components/notification.html %}
+    </span>
+
+    <span style="{% if
+      page.url contains '/en-us/product-support/office-scan.html' or
+      page.url contains '/en-us/product-support/deep-security.html'
+    %}
+      display: none;
+    {% endif %}">
+      {% include _en-us/components/mobile-header.html %}
+    </span>
+
+    {% include _en-us/components/nav/mobile-navigation.html %}
+
+    {{ content }}
+
+    {% include _en-us/resources.html %}
+    {% include _en-us/footer-global.html %}
+    {% include _en-us/components/modal.html %}
+
+    {% include _en-us/global/javascript.html %}
+
+  </body>
+
+</html>

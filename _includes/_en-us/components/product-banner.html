@@ -1,0 +1,37 @@
+<div id="product-banner">
+  <div class="container">
+    <div class="heading">
+      <h1 class="heading-title display-{{ page.heading-title-display }}">{{ page.heading-title }}</h1>
+      <div class="heading-subtitle">
+        <ul class="list list-inline">
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="">Select Product Version<i class="fa fa-caret-down fa-left"></i></a>
+            <div class="dropdown-menu dropdown-menu-left">
+              <ul>
+                <li><a href="">11.0</a></li>
+                <li><a href="">10.6</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="divider"></li>
+          <li><a href="{{ site.baseurl }}/en-us/business/all-products.html" data-toggle="modal" data-target="#all-products" data-remote="{{ site.baseurl }}/en-us/business/all-products.html">Choose Other Product</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-push-2 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+        <form>
+          <div class="input-group input-group-lg" style="padding: 5px; background-color: rgba(0,0,0,.25);">
+            <div class="form-group form-reset">
+              <input class="form-control" type="search" placeholder="Search topics for {{ page.heading-title }}" required="">
+              <button class="reset" type="reset">&times;</button>
+            </div>
+            <span class="input-group-btn">
+              <a href="{{ site.baseurl }}/en-us/business/search.html" class="btn btn-info btn-lg"><i class="fa fa-search"></i></a>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

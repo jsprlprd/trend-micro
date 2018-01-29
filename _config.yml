@@ -1,0 +1,7 @@
+markdown: kramdown
+baseurl: /trend-micro
+exclude:
+    - node_modules
+    - README.md
+
+port: 5000

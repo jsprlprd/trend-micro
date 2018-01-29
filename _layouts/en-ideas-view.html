@@ -1,0 +1,361 @@
+---
+
+layout: en-global
+
+pageCSS: ideas.css
+
+---
+
+<main class="container" id="{{ page.pageID }}">
+
+  <div class="row">
+
+    <div class="col-md-9">
+
+      <div class="heading hidden-xs hidden-sm">
+        <p class="heading-subtitle"><a href="{{ site.baseurl }}/en-us/ideas/idea-search.html">All Ideas</a></p>
+        <div class="pull-right">
+          <a href="" class="btn btn-positive active"><i class="fa fa-lg fa-thumbs-up fa-right"></i>Upvoted</a>
+        </div>
+        <h1 class="heading-title display-2">{{ page.idea-title }}</h1>
+        <div class="heading-subtitle hide">
+          <ul class="list list-toggable">
+            <li>
+              <ul class="list list-icon list-toggable">
+                <li class="icon-clock-o list-title">Posted:</li>
+                <li>{{ page.idea-date }}</li>
+              </ul>
+            </li>
+            <li class="display-item" data-display-item="2" id="product-version">
+              <ul class="list list-toggable">
+                <li class="list-title">Product:</li>
+                <li>{{ page.idea-product }}</li>
+              </ul>
+              <!-- <a href="" class="display-toggle show-more"></a>
+              <a href="" class="display-toggle show-less"></a> -->
+            </li>
+            <li class="display-item" data-display-item="2" id="product-status">
+              <ul class="list list-toggable">
+                <li class="list-title">Status:</li>
+                <li>{{ page.idea-status }}</li>
+              </ul>
+              <!-- <a href="" class="display-toggle show-more"></a>
+              <a href="" class="display-toggle show-less"></a> -->
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-body" style="max-width: 100%;">
+          {{ content }}
+          <ul class="list list-inline">
+            <li><a href="">Merge Idea</a></li>
+            <li class="divider"></li>
+            <!-- <li class="dropdown dropdown-hover">
+              <a href="">More<i class="fa fa-left fa-caret-down"></i></a>
+              <div class="dropdown-menu dropdown-menu-left">
+                <ul class="dropdown-menu-inner">
+                  <li><a href=""><i class="fa fa-right fa-pencil"></i>Edit</a></li>
+                  <li><a href=""><i class="fa fa-right fa-trash"></i>Delete</a></li>
+                  <li class="divider"></li>
+                  <li><a href=""><i class="fa fa-right fa-flag"></i>Report</a></li>
+                </ul>
+              </div>
+            </li> -->
+            <li><a href=""><i class="fa fa-right fa-flag"></i>Report</a></li>
+          </ul>
+        </div>
+        <div class="section-footer">
+          <ul class="list list-inline">
+            <!-- <li><div class="label {{ page.idea-status-type }} media-label">{{ page.idea-status }}</div></li>
+            <li class="divider"></li>
+            <li>Posted to <a href="">{{ page.idea-product }}</a></li>
+            <li class="divider"></li> -->
+            <!-- <li><a href="">Comments</a> {{ page.idea-comments }}</li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="section section-primary section-border-bottom">
+        <div class="section-heading">
+          <h6 class="section-title display-7">Comments ( {{ page.idea-comments }} )</h6>
+          <div class="form-inline pull-right">
+            <div class="form-group">
+              <label for="" class="control-label">Sort by</label>
+              <select class="form-control input-xs" name="">
+                <option value="option">Older First</option>
+                <option value="option">Newer First</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="section-body" style="max-width: 100%;">
+          <ul class="list list-bordered" id="idea-comment-list">
+            {% for post in site.posts %}
+            <li class="media" style="overflow: visible;">
+              <div class="media-left">
+                <img class="media-object img-circle" src="{{ site.baseurl }}/assets/images/{{ post.idea-avatar }}" width="50" />
+              </div>
+              <div class="media-content" style="overflow: visible;">
+                <div class="media-heading">
+                  <p class="media-subtitle">
+                    <a href="">{{ post.idea-author }}</a>
+                  </p>
+                </div>
+                <div class="media-body">
+                  {{ post.idea-body }}
+                </div>
+                <div class="media-footer">
+                  <ul class="list list-inline">
+                    <li class="published-date">{{ post.idea-date }}</li>
+                    <li class="divider"></li>
+                    <li class="dropdown dropdown-hover">
+                      <a href="">More<i class="fa fa-left fa-caret-down"></i></a>
+                      <div class="dropdown-menu dropdown-menu-left">
+                        <ul class="dropdown-menu-inner">
+                          <li><a href=""><i class="fa fa-right fa-pencil"></i>Edit</a></li>
+                          <li><a href=""><i class="fa fa-right fa-trash"></i>Delete</a></li>
+                          <li class="divider"></li>
+                          <li><a href=""><i class="fa fa-right fa-flag"></i>Report</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="section-footer">
+          <a href="" class="hide"><i class="fa fa-chevron-left fa-right"></i>Prev</a>
+          <strong>1</strong> to <strong>10</strong> of 500
+          <a href="">Next<i class="fa fa-chevron-right fa-left"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+
+      <div class="panel panel-default" style="margin-top: 40px;">
+        <div class="panel-body">
+          <div class="text-center">
+            <img class="img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" width="60px;">
+            <h6 style="margin-bottom: 0; margin-top: 5px;"><a href="">{{ page.idea-author }}</a></h6>
+          </div>
+        </div>
+        <table class="table">
+          <tbody>
+            <tr class="active">
+              <td>
+                <div class="small text-muted">Status</div>
+                <div>{{ page.idea-status }}</div>
+              </td>
+            </tr>
+            <tr class="active">
+              <td>
+                <div class="small text-muted">Posted</div>
+                <div>{{ page.idea-date }}</div>
+              </td>
+            </tr>
+            <tr class="active">
+              <td>
+                <div class="small text-muted">Product</div>
+                <div>{{ page.idea-product }}</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h6 class="panel-title">Votes ( {{ page.idea-votes }} )</h6>
+        </div>
+        <div class="panel-body">
+          <p class="text-success">
+            <strong>## Upvotes</strong>
+          </p>
+          <div class="row">
+            <div class="col-xs-3 col-sm-2 col-md-4 col-lg-3">
+              <a href=""  data-toggle="tooltip" data-placement="top" title="" data-original-title="{{ page.idea-author }}"><img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" /></a>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-4 col-lg-3">
+              <a href=""  data-toggle="tooltip" data-placement="top" type="button" title="" data-original-title="{{ page.idea-author }}"><img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" /></a>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-4 col-lg-3">
+              <a href=""  data-toggle="tooltip" data-placement="top" type="button" title="" data-original-title="{{ page.idea-author }}"><img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" /></a>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-4 col-lg-3">
+              <a href=""  data-toggle="tooltip" data-placement="top" type="button" title="" data-original-title="{{ page.idea-author }}"><img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <p class="text-primary">
+            <strong>## Downvotes</strong>
+          </p>
+          <div class="row">
+            <div class="col-xs-3 col-sm-2 col-md-4 col-lg-3">
+              <a href=""  data-toggle="tooltip" data-placement="top" type="button" title="" data-original-title="{{ page.idea-author }}"><img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" /></a>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-4 col-lg-3">
+              <a href=""  data-toggle="tooltip" data-placement="top" type="button" title="" data-original-title="{{ page.idea-author }}"><img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <a href="#idea-votes" data-toggle="modal" data-target="#idea-votes">View all Votes<i class="fa fa-lg fa-angle-right fa-left"></i></a>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h6 class="panel-title">Medged Ideas</h6>
+        </div>
+        <ul class="list-group" id="idea-list">
+          {% for post in site.posts %}
+          <li class="list-group-item">
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.idea-title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="panel-footer">
+          <a href="">View all Merged Ideas<i class="fa fa-lg fa-angle-right fa-left"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<div class="modal fade" id="idea-votes">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title">Votes</h6>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs nav-tabs-one nav-sm">
+          <li class="active"><a href="#upvotes" data-toggle="tab">Upvotes</a></li>
+          <li><a href="#downvotes" data-toggle="tab">Downvotes</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="upvotes">
+            <div class="row">
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="downvotes">
+            <div class="row">
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-2">
+                <img class="img-responsive img-circle" src="{{ site.baseurl }}/assets/images/{{ page.idea-avatar }}" />
+                <div class="small text-muted text-center" style="margin-top: 5px">
+                  <a href="">{{ page.idea-author }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

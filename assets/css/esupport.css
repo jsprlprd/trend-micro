@@ -1,0 +1,297 @@
+@charset 'utf-8';
+
+#home-page .heading {
+  margin-top: 55px !important;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#home-page .heading-title span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 75%;
+}
+
+@media (min-width: 992px) {
+
+  #home-page .heading-title span {
+    display: inline-block;
+    text-transform: inherit;
+    font-size: 100%;
+  }
+
+}
+
+/********** Landing Page - Carousel **********/
+
+#main-services .section
+{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#main-services .section-header a
+{
+    text-decoration: none;
+}
+
+#main-services .section-title
+{
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+    text-decoration: none;
+
+    color: #333;
+}
+
+#main-services .section-body {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#main-services .section-footer {
+  font-size: 15px;
+}
+
+#main-services .carousel-control {
+  max-height: 200px;
+}
+
+
+
+
+
+/********** eSupport - Header with Images **********/
+
+#technical-advisories .section-title,
+#technical-video-guides .section-title,
+#threat-detection .section-title,
+#threat-removal .section-title,
+#threat-prevention .section-title,
+#threat-advisory .section-title,
+#threat-blog .section-title,
+#threat-encyclopedia .section-title,
+#contact-srf .section-title,
+#contact-renew .section-title,
+#contact-sales .section-title,
+#contact-phone .section-title {
+  padding-left: 27px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
+
+
+
+
+
+/********** Technical Support **********/
+
+#technical-advisories .section-title {
+  background-image: url(../images/red-icon-advisories.png);
+}
+
+#technical-video-guides .section-title {
+  background-image: url(../images/red-icon-video-guides.png);
+}
+
+
+
+
+
+/********** Product Page **********/
+
+#most-helpful,
+#most-viewed {
+  display: none;
+}
+
+
+#product-banner
+{
+  padding: 40px 0 25px;
+    margin-bottom: 25px;
+      text-align: center;
+
+    border-bottom: 1px solid #ddd;
+    background-image: url('../images/background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#product-banner .heading {
+  margin-top: 0 !important;
+}
+
+#product-banner .input-group .btn
+{
+    min-width: 60px;
+    padding: 10px 13px;
+}
+
+@media (min-width: 768px)
+{
+    #product-banner .input-group .btn
+    {
+        min-width: 70px;
+        padding: 12.5px 13px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    #product-banner .input-group .btn
+    {
+        min-width: 80px;
+        padding: 15px 13px;
+    }
+}
+
+#product-banner .input-group .btn,
+#product-banner .input-group .form-control
+{
+    height: 40px;
+}
+
+@media (min-width: 768px)
+{
+    #product-banner .input-group .btn,
+    #product-banner .input-group .form-control
+    {
+        height: 45px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    #product-banner .input-group .btn,
+    #product-banner .input-group .form-control
+    {
+        height: 50px;
+    }
+}
+
+#product-banner .input-group .form-control
+{
+    padding-right: 53px;
+}
+
+@media (min-width: 768px)
+{
+    #product-banner .input-group .form-control
+    {
+        padding-right: 58px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    #product-banner .input-group .form-control
+    {
+        padding-right: 63px;
+    }
+}
+
+#product-banner .input-group .reset
+{
+    line-height: 40px;
+
+    width: 40px;
+    height: 40px;
+}
+
+@media (min-width: 768px)
+{
+    #product-banner .input-group .reset
+    {
+        line-height: 45px;
+
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    #product-banner .input-group .reset
+    {
+        line-height: 50px;
+
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+
+
+/********** Virust & Threat Help **********/
+
+#threat-detection .section-title {
+  background-image: url(../images/red-icon-detection.png);
+}
+
+#threat-removal .section-title {
+  background-image: url(../images/red-icon-removal.png);
+}
+
+#threat-prevention .section-title {
+  background-image: url(../images/red-icon-prevention.png);
+}
+
+#threat-advisory .section-title {
+  background-image: url(../images/gray-icon-latest-advisories.png);
+}
+
+#threat-blog .section-title {
+  background-image: url(../images/gray-icon-malware-blog.png);
+}
+
+#threat-encyclopedia .section-title {
+  background-image: url(../images/gray-icon-threat-encyclopedia.png);
+}
+
+#threat-detection .section-body,
+#threat-removal .section-body,
+#threat-prevention .section-body,
+#threat-advisory .section-body,
+#threat-blog .section-body,
+#threat-encyclopedia .section-body {
+  max-width: inherit;
+}
+
+#free-tools li {
+  padding: 15px 30px;
+}
+
+#free-tools img {
+  padding: 0 10px 10px;
+}
+
+
+
+
+
+
+/********** Contact Support **********/
+
+#contact-support .heading .heading-subtitle {
+  margin-left: 65px;
+  margin-top: -10px;
+}
+
+#contact-srf .section-title {
+  background-image: url(../images/red-icon-support-request-form.png);
+}
+
+#contact-renew .section-title {
+  background-image: url(../images/red-icon-renew-online.png);
+}
+
+#contact-sales .section-title {
+  background-image: url(../images/red-icon-sales-contact.png);
+}
+
+#contact-phone .section-title {
+  background-image: url(../images/red-icon-phone.png);
+}

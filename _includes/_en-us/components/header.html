@@ -1,0 +1,54 @@
+<header class="navbar navbar-default navbar-fixed-top">
+
+  <span style="{% if page.url contains '/en-us/maintainance.html' %} display: none; {% endif %}">
+    <div id="global-header" class="hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <ul class="nav pull-left">
+            <li><a href="">Home &amp; Home Office Support</a></li>
+            <li class="active"><a href="{{ site.baseurl }}/en-us/business/">Business Support</a></li>
+            <li><a href="">Partner Portal</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li><a href="">TrendMicro.com</a></li>
+            <li class="dropdown">
+              <a href="" data-toggle="dropdown">Product Logins<i class="fa fa-caret-down fa-left"></i></a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <ul class="dropdown-menu-inner">
+                  <li class="dropdown-header">Product Logins</li>
+                  <li><a href="">Online Case Tracking</a></li>
+                  <li><a href="">Premium Support</a></li>
+                  <li><a href="">Worry-Free Business Security</a></li>
+                  <li><a href="">Remote Manager</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#select-region" data-toggle="modal" data-targe="#select-region"><i class="fa fa-globe fa-right"></i>Asia Pacific</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </span>
+
+  <div class="container">
+
+    <button class="navbar-toggle" type="button" id="mobile-slider">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ site.baseurl }}/en-us/business/">
+        <img src="{{ site.baseurl }}/assets/images/tm-logo.svg" alt="Trend Micro | Business Support" title="Trend Micro | Business Support" /><span>Business<br /> Support</span>
+      </a>
+    </div>
+
+    <span style="{% if page.url contains '/en-us/maintainance.html' %} display: none; {% endif %}">
+      {% include _en-us/components/nav/main-navigation.html %}
+    </span>
+  </div>
+
+  <div class="navbar-overlay"></div>
+
+</header>

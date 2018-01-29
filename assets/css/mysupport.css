@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+.heading-subtitle {
+  font-size: 17px;
+  letter-spacing: 0em;
+  line-height: 1.25em;
+}
+
+
+
+@media (min-width: 992px) {
+    body {
+        margin-top: 205px;
+    }
+}
+
+
+/********** Dashboard **********/
+
+#action-box .panel-heading {
+  padding: 15px;
+  margin-bottom: -15px;
+}
+
+#action-box .panel-title {
+  font-size: 25px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  background-image: url(../images/icon-warning-48.png);
+  background-repeat: no-repeat;
+  background-size: 45px;
+  padding-left: 60px;
+}
+
+#action-box .list {
+  margin: 20px 0;
+  margin-left: 60px;
+}
+
+#action-box .table {
+  margin-bottom: 0;
+}
+
+#action-box .table tr th:nth-last-child(-n+2),
+#action-box .table tr td:nth-last-child(-n+2),
+#updated-cases .table tr th:nth-last-child(-n+3),
+#updated-cases .table tr td:nth-last-child(-n+3) {
+  text-align: center;
+}
+
+
+
+
+
+/********** New Request **********/
+
+#new-request textarea {
+  min-height: 100px;
+}
+
+#new-request .iframe.form-control {
+  display: inline-table;
+  border: 2px dashed #00A94F;
+  background-color: #dcffec;
+  color: #00A94F;
+  text-align: center;
+  padding: 25px;
+}
+
+#new-request .iframe.form-control a {
+  color: inherit;
+}
+
+
+#category-description .modal-body {
+  background-color: #f8f8f8;
+}
+
+.loading {
+  text-align: center;
+  height: 100px;
+  vertical-align: middle !important;
+}
+
+.loading-content {
+  background-image: url(../images/fancybox_loading.gif);
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 42px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+#change-control,
+/*#product-profile-details,*/
+#malware-issue-category,
+#tipping-point-issue-category,
+#change-control-category,
+/*#appliance-hardware-description,*/
+#configuration-description,
+#installation-description,
+#performance-description,
+#system-crash-description,
+#uninstall-description,
+#update-rollback-description,
+#user-interface-document-description,
+#product-inquiry-description,
+#account-administration-description,
+#licensing-activation-description,
+#malware-issue-description,
+#infected-description,
+#file-false-positive-description,
+#url-reclassification-description,
+#spam-description,
+#spam-false-positive-description,
+#suggested-articles,
+#subject-loading,
+#sub-category,
+#spam-category,
+#false-alarm-category,
+#virus-pattern-type,
+#detection-name,
+#description-clean-failed,
+#description-spam,
+#description-virus-false-alarm,
+#description-url-reclassification,
+#neuron,
+#infected-attachment,
+#file-false-positive-attachment,
+#spam-attachment,
+#support-file,
+#email-file,
+#virus-and-email-file-description.with-attk,
+#support-file-description,
+#url-text-file-description,
+#email-file-description,
+#attachment-progress,
+#attachment-list,
+#infected-attachment-request,
+#url-reclassification,
+#enter-url,
+#case-urgency,
+#business-impact,
+#critical-business-impact,
+#contact-call {
+  display: none;
+}
+
+#product-issue-description,
+#malware-issue-description {
+  margin-bottom: 0;
+}
+
+
+.Safe, .Dangerous, .Untested {
+  padding-left: 35px !important;
+  position: relative;
+  white-space: normal;
+}
+
+.Safe::before,
+.Dangerous::before,
+.Untested::before {
+  font-family: FontAwesome;
+  position: absolute;
+  left: 15px;
+}
+
+.Safe:before {
+  content: "\f00c";
+  color: #00A94F;
+}
+
+.Dangerous:before {
+  content: "\f071";
+  color: #D71920;
+}
+
+.Untested:before {
+  content: "\f128";
+  color: #444444;
+}
+
+#contact-list .panel {
+  margin-bottom: 0;
+}
+
+#contact-list tbody {
+  max-height: 320px;
+}
+
+#contact-list tr th,
+#contact-list tr td {
+  width: 100%;
+}
+
+#contact-list tr th:first-child,
+#contact-list tr td:first-child {
+  width: 45px;
+}
+
+
+
+
+
+/********** Support Request **********/
+
+#threat-cases .table tr th:nth-last-child(-n+3),
+#threat-cases .table tr td:nth-last-child(-n+3),
+#threat-analysis .table tr th:nth-last-child(-n+2),
+#threat-analysis .table tr td:nth-last-child(-n+2) {
+  text-align: center;
+}
+
+
+
+
+
+/********** My Profile **********/
+
+#personal-information .media-subtitle::before,
+#personal-information .media-subtitle::after {
+  content: "''"
+}
+
+
+
+
+
+/********** My Products and Services **********/
+
+#support-agreement .table tr th:nth-last-child(-n+3),
+#support-agreement .table tr td:nth-last-child(-n+3),
+#product-profile .table tr th:nth-last-child(3),
+#product-profile .table tr td:nth-last-child(3),
+#product-profile .table tr th:last-child,
+#product-profile .table tr td:last-child,
+#product-license .table tr th:nth-last-child(-n+2),
+#product-license .table tr td:nth-last-child(-n+2) {
+  text-align: center;
+}
+
+
+
+
+/*#personal-information .section-body,
+#password .section-body,
+#case-update-recipients .section-body {
+  max-width: 100%;
+}*/
+
+#case-update-recipients .section-body {
+  padding-left: 75px;
+  background-image: url("../images/biz-contact-support.png");
+  background-repeat: no-repeat;
+}
+
+.edit-mode,
+.edit-photo-btn,
+.close-btn {
+  display: none;
+}

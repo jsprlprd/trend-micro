@@ -1,0 +1,345 @@
+---
+
+layout: en-portal-access
+
+meta-title: Create MySupport Account
+
+heading-title: Create MySupport Account
+heading-title-display: 2
+
+heading-subtitle: If you already have MySupport Account, you can
+
+heading-subtitle-link-text: sign in here
+heading-subtitle-link-url: /en-us/portal-access/sign-in.html
+
+heading-visibility: hidden-xs hidden-sm
+heading-image-visibility: none
+heading-subtitle-top-visibility: none
+
+---
+
+{% include _en-us/components/heading.html %}
+
+<div class="row">
+
+  <div class="col-md-7">
+    <form class="form-wrapper">
+      <div class="form-heading">
+        <h2 class="form-heading-title display-6">For Medium &amp; Enterpise Customers</h2>
+      </div>
+      <!-- <div class="notification notifcation-danger">
+        <div class="notification-content">
+          <p class="notification-title">Please provide a valid activation code.</p>
+          <p>If you are still having trouble, contact <a href="">Trend Micro Technical Support</a>, or <a href="">renew your product</a></p>
+        </div>
+      </div> -->
+      <fieldset class="form-group form-required">
+        <label class="control-label">Product Activation Code <a href=""><i class="fa fa-info-circle"></i></a></label>
+        <input type="text" class="form-control" placeholder="Product Activation Code" />
+        <div class="help-block">
+          <ul class="list list-icon list-icon-red icon-arrow-right list-condensed">
+            <li><a href="#my-product-ac" data-toggle="modal">How to find the activation code for your product</a>.</li>
+            <li><a href="">Contact Support</a> if you cannot find your activation code.</li>
+          </ul>
+        </div>
+      </fieldset>
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset class="form-group form-required">
+            <label class="control-label">First Name:</label>
+            <input type="text" class="form-control" placeholder="First Name" />
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset class="form-group form-required">
+            <label class="control-label">Last Name:</label>
+            <input type="text" class="form-control" placeholder="Last Name" />
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset class="form-group form-required">
+            <label class="control-label">Email Address:</label>
+            <input type="email" class="form-control" placeholder="Email Address" />
+            <div class="form-message hide">
+              This email is already registered. Would you like to login or reset your password?
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset class="form-group form-required">
+            <label class="control-label">Phone Number:</label>
+            <input type="text" pattern="[0-9]*" class="form-control" placeholder="Phone Number" />
+          </fieldset>
+        </div>
+        <div class="col-md-12">
+          <div class="help-block">
+            We promise not to share this. Your email will be used for your log in, and you will receive instructions on setting your password.
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset class="form-group form-required">
+            <label class="control-label">Select a Region:</label>
+            <select class="form-control ">
+              <option>Asia Pacific</option>
+              <option selected>Europe</option>
+              <option>Latin America</option>
+              <option>Mediterranean, Middle East &amp; Africa</option>
+              <option>North America</option>
+              <option>United States &amp; Canada</option>
+            </select>
+          </fieldset>
+        </div>
+
+        <div class="col-md-6">
+          <fieldset class="form-group form-required">
+            <label class="control-label">Country:</label>
+            <select class="form-control">
+              <!-- <optgroup label="Asia Pacific">
+                <option value="en-au">Australia and New Zealand</option>
+                <option value="en-us">Hong Kong</option>
+                <option value="en-us">India</option>
+                <option value="en-us">Indonesia</option>
+                <option value="en-us">Malaysia</option>
+                <option value="en-us">Singapore</option>
+              </optgroup>
+              <optgroup label="North America">
+                <option selected="selected" value="en-us">United States &amp; Canada</option>
+              </optgroup> -->
+              <optgroup label="Europe">
+                <option value="en-gb">United Kingdom</option>
+                <option value="fr-fr">France</option>
+                <option value="de-de">Germany</option>
+                <option value="it-it">Italy</option>
+                <option value="ru-ru">Russia</option>
+                <option value="es-es">Spain</option>
+                <option value="en-gb">Rest of EMEA</option>
+              </optgroup>
+              <!-- <optgroup label="Mediterranean, Middle East &amp; Africa">
+                <option value="en-jm">Mediterranean, Middle East &amp; Africa</option>
+              </optgroup>
+              <optgroup label="Latin America">
+                <option value="en-us">Brazil</option>
+                <option value="en-us">Mexico</option>
+                <option value="en-us">Latin America</option>
+              </optgroup> -->
+            </select>
+          </fieldset>
+        </div>
+        <div class="col-md-12">
+          <fieldset class="form-group form-required">
+            <label class="control-label">Time Zone:</label>
+            <select class="form-control">
+              <!-- <option value="80">(GMT+14:00) Line Is. Time (Pacific/Kiritimati)</option>
+              <option value="76">(GMT+13:00) Phoenix Is. Time (Pacific/Enderbury)</option>
+              <option value="84">(GMT+13:00) Tonga Time (Pacific/Tongatapu)</option>
+              <option value="75">(GMT+12:45) Chatham Standard Time (Pacific/Chatham)</option>
+              <option value="31">(GMT+12:00) Petropavlovsk-Kamchatski Time (Asia/Kamchatka)</option>
+              <option value="74">(GMT+12:00) New Zealand Standard Time (Pacific/Auckland)</option>
+              <option value="77">(GMT+12:00) Fiji Time (Pacific/Fiji)</option>
+              <option value="78">(GMT+11:00) Solomon Is. Time (Pacific/Guadalcanal)</option>
+              <option value="82">(GMT+11:00) Norfolk Time (Pacific/Norfolk)</option>
+              <option value="54">(GMT+10:30) Lord Howe Standard Time (Australia/Lord_Howe)</option>
+              <option value="52">(GMT+10:00) Australian Eastern Standard Time (Queensland) (Australia/Brisbane)</option>
+              <option value="56">(GMT+10:00) Australian Eastern Standard Time (New South Wales) (Australia/Sydney)</option>
+              <option value="51">(GMT+09:30) Australian Central Standard Time (South Australia) (Australia/Adelaide)</option>
+              <option value="53">(GMT+09:30) Australian Central Standard Time (Northern Territory) (Australia/Darwin)</option>
+              <option value="40">(GMT+09:00) Korea Standard Time (Asia/Seoul)</option>
+              <option value="46">(GMT+09:00) Japan Standard Time (Asia/Tokyo)</option>
+              <option value="27">(GMT+08:00) Hong Kong Time (Asia/Hong_Kong)</option>
+              <option value="34">(GMT+08:00) Malaysia Time (Asia/Kuala_Lumpur)</option>
+              <option value="36">(GMT+08:00) Philippines Time (Asia/Manila)</option>
+              <option value="57">(GMT+08:00) China Standard Time (Asia/Shanghai)</option>
+              <option value="41">(GMT+08:00) Singapore Time (Asia/Singapore)</option>
+              <option value="42">(GMT+08:00) China Standard Time (Asia/Taipei)</option>
+              <option value="55">(GMT+08:00) Australian Western Standard Time (Australia/Perth)</option>
+              <option value="22">(GMT+07:00) Indochina Time (Asia/Bangkok)</option>
+              <option value="39">(GMT+07:00) Indochina Time (Asia/Ho_Chi_Minh)</option>
+              <option value="28">(GMT+07:00) West Indonesia Time (Asia/Jakarta)</option>
+              <option value="37">(GMT+06:30) Myanmar Time (Asia/Rangoon)</option>
+              <option value="25">(GMT+06:00) Bangladesh Time (Asia/Dhaka)</option>
+              <option value="33">(GMT+05:45) Nepal Time (Asia/Kathmandu)</option>
+              <option value="24">(GMT+05:30) India Standard Time (Asia/Colombo)</option>
+              <option value="23">(GMT+05:30) India Standard Time (Asia/Kolkata)</option>
+              <option value="91">(GMT+05:00) Azerbaijan Summer Time (Asia/Baku)</option>
+              <option value="32">(GMT+05:00) Pakistan Time (Asia/Karachi)</option>
+              <option value="43">(GMT+05:00) Uzbekistan Time (Asia/Tashkent)</option>
+              <option value="47">(GMT+05:00) Yekaterinburg Time (Asia/Yekaterinburg)</option>
+              <option value="30">(GMT+04:30) Afghanistan Time (Asia/Kabul)</option>
+              <option value="45">(GMT+04:30) Iran Daylight Time (Asia/Tehran)</option>
+              <option value="26">(GMT+04:00) Gulf Standard Time (Asia/Dubai)</option>
+              <option value="44">(GMT+04:00) Georgia Time (Asia/Tbilisi)</option>
+              <option value="93">(GMT+04:00) Armenia Time (Asia/Yerevan)</option>
+              <option value="3">(GMT+03:00) Eastern African Time (Africa/Nairobi)</option>
+              <option value="21">(GMT+03:00) Arabia Standard Time (Asia/Baghdad)</option> -->
+              <!-- <option value="90">(GMT+03:00) Eastern European Summer Time (Asia/Beirut)</option> -->
+              <!-- <option value="29">(GMT+03:00) Israel Daylight Time (Asia/Jerusalem)</option>
+              <option value="35">(GMT+03:00) Arabia Standard Time (Asia/Kuwait)</option>
+              <option value="38">(GMT+03:00) Arabia Standard Time (Asia/Riyadh)</option> -->
+              <optgroup label="Europe">
+                <option value="59">(GMT+03:00) Eastern European Summer Time (Europe/Athens)</option>
+                <option value="62">(GMT+03:00) Eastern European Summer Time (Europe/Bucharest)</option>
+                <option value="64">(GMT+03:00) Eastern European Summer Time (Europe/Helsinki)</option>
+                <option value="65">(GMT+03:00) Eastern European Summer Time (Europe/Istanbul)</option>
+                <option value="68">(GMT+03:00) Moscow Standard Time (Europe/Minsk)</option>
+                <option value="69" selected="">(GMT+03:00) Moscow Standard Time (Europe/Moscow)</option>
+                <!-- <option value="1">(GMT+02:00) Eastern European Time (Africa/Cairo)</option>
+                <option value="2">(GMT+02:00) South Africa Standard Time (Africa/Johannesburg)</option> -->
+                <option value="58">(GMT+02:00) Central European Summer Time (Europe/Amsterdam)</option>
+                <option value="60">(GMT+02:00) Central European Summer Time (Europe/Berlin)</option>
+                <option value="61">(GMT+02:00) Central European Summer Time (Europe/Brussels)</option>
+                <option value="70">(GMT+02:00) Central European Summer Time (Europe/Paris)</option>
+                <option value="71">(GMT+02:00) Central European Summer Time (Europe/Prague)</option>
+                <option value="72">(GMT+02:00) Central European Summer Time (Europe/Rome)</option>
+                <option value="88">(GMT+01:00) Central European Time (Africa/Algiers)</option>
+                <option value="92">(GMT+01:00) Western European Summer Time (Africa/Casablanca)</option>
+                <option value="63">(GMT+01:00) Irish Summer Time (Europe/Dublin)</option>
+                <option value="66">(GMT+01:00) Western European Summer Time (Europe/Lisbon)</option>
+                <option value="67">(GMT+01:00) British Summer Time (Europe/London)</option>
+              </optgroup>
+              <!-- <option value="98">(GMT+00:00) Eastern Greenland Summer Time (America/Scoresbysund)</option>
+              <option value="94">(GMT+00:00) Azores Summer Time (Atlantic/Azores)</option>
+              <option value="73">(GMT+00:00) Greenwich Mean Time (GMT)</option>
+              <option value="49">(GMT-01:00) Cape Verde Time (Atlantic/Cape_Verde)</option>
+              <option value="50">(GMT-02:00) South Georgia Standard Time (Atlantic/South_Georgia)</option>
+              <option value="19">(GMT-02:30) Newfoundland Daylight Time (America/St_Johns)</option>
+              <option value="6">(GMT-03:00) Argentine Time (America/Argentina/Buenos_Aires)</option>
+              <option value="10">(GMT-03:00) Atlantic Daylight Time (America/Halifax)</option>
+              <option value="87">(GMT-03:00) Chile Time (America/Santiago)</option>
+              <option value="18">(GMT-03:00) Brasilia Time (America/Sao_Paulo)</option>
+              <option value="48">(GMT-03:00) Atlantic Daylight Time (Atlantic/Bermuda)</option>
+              <option value="85">(GMT-04:00) Eastern Daylight Time (America/Indiana/Indianapolis)</option>
+              <option value="14">(GMT-04:00) Eastern Daylight Time (America/New_York)</option>
+              <option value="17">(GMT-04:00) Atlantic Standard Time (America/Puerto_Rico)</option>
+              <option value="7">(GMT-04:30) Venezuela Time (America/Caracas)</option>
+              <option value="5">(GMT-05:00) Colombia Time (America/Bogota)</option>
+              <option value="8">(GMT-05:00) Central Daylight Time (America/Chicago)</option>
+              <option value="11">(GMT-05:00) Peru Time (America/Lima)</option>
+              <option value="13">(GMT-05:00) Central Daylight Time (America/Mexico_City)</option>
+              <option value="15">(GMT-05:00) Eastern Standard Time (America/Panama)</option>
+              <option value="9">(GMT-06:00) Mountain Daylight Time (America/Denver)</option>
+              <option value="86">(GMT-06:00) Central Standard Time (America/El_Salvador)</option>
+              <option value="100">(GMT-06:00) Mountain Daylight Time (America/Mazatlan)</option>
+              <option value="12">(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)</option>
+              <option value="16">(GMT-07:00) Mountain Standard Time (America/Phoenix)</option>
+              <option value="20">(GMT-07:00) Pacific Daylight Time (America/Tijuana)</option>
+              <option value="4">(GMT-08:00) Alaska Daylight Time (America/Anchorage)</option>
+              <option value="95">(GMT-08:00) Pitcairn Standard Time (Pacific/Pitcairn)</option>
+              <option value="97">(GMT-09:00) Hawaii-Aleutian Daylight Time (America/Adak)</option>
+              <option value="96">(GMT-09:00) Gambier Time (Pacific/Gambier)</option>
+              <option value="99">(GMT-09:30) Marquesas Time (Pacific/Marquesas)</option>
+              <option value="79">(GMT-10:00) Hawaii-Aleutian Standard Time (Pacific/Honolulu)</option>
+              <option value="81">(GMT-11:00) Niue Time (Pacific/Niue)</option>
+              <option value="83">(GMT-11:00) Samoa Standard Time (Pacific/Pago_Pago)</option> -->
+            </select>
+          </fieldset>
+        </div>
+      </div>
+
+      <hr />
+
+      <fieldset class="form-group">
+        <div class="checkbox">
+          <label><input type="checkbox">I have read and agree on the <a href="">Terms and Condition</a>.</label>
+        </div>
+      </fieldset>
+      <a href="{{ site.baseurl }}/en-us/business/portal-access/create-account-confirmation.html" class="btn btn-primary btn-lg">Create MySupport Account</a>
+    </form>
+  </div>
+
+  <div class="col-md-4 col-md-offset-1">
+    <div class="card">
+      <div class="card-heading">
+        <h6 class="card-title display-6">For Partners and Distributors<br class="visible-md" /><br class="visible-md" /><br class="visible-sm" /></h6>
+      </div>
+      <div class="card-body">
+        <p>If you are a Trend Micro partner, your account is to be registered with the Trend Micro Partner Portal.</p>
+        <p>This includes:</p>
+        <ul class="list list-icon list-icon-red list-icon-center icon-angle-right list-condensed">
+          <li>Distributor</li>
+          <li>Gold / Premium Partner</li>
+          <li>Bronze / Silver Partner</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <a href="" class="btn btn-info btn-block-lg">Open a Support Ticket<i class="fa fa-chevron-right fa-left"></i></a>
+        <a href="" class="btn btn-link btn-block-lg">Partner Portal<i class="fa fa-chevron-right fa-left"></i></a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-heading">
+        <h6 class="card-title display-6">For Worry-Free Business Security &amp; Hosted Email Security Customers</h6>
+      </div>
+      <div class="card-body">
+        <p>Open a support case online and our team will respond to your e-mail address within 24 hours.</p>
+        <fieldset class="form-group">
+          <label class="control-label">Select Language:</label>
+          <select class="form-control">
+            <option>France</option>
+            <option>Italy</option>
+            <option>Germany</option>
+            <option>Spain</option>
+            <option>United Kingdom</option>
+          </select>
+        </fieldset>
+      </div>
+      <div class="card-footer">
+        <a href="" class="btn btn-info btn-block-lg">Open a Support Ticket<i class="fa fa-chevron-right fa-left"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="my-product-ac">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title">How to find the activation code for your product.</h6>
+      </div>
+      <div class="modal-body">
+        <p>
+          An Activation Code (AC) is used to activate your Trend Micro product. Without the AC, these products will still be installed, but their update and scanning features will be disabled.
+        </p>
+        <p>
+          It consists of two letters followed by four numbers, and then by five groups of five numbers, or 37 digits in all, including hyphens.
+        </p>
+        <p>
+          The AC is typically received once you register your product.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="{{ site.baseurl }}/en-us/business/renewal-and-registration.html" class="btn btn-link">
+          Go to Renewals and Registration<i class="fa fa-chevron-right fa-left"></i>
+        </a>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="srf-regions">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title">Select your Region</h6>
+      </div>
+      <div class="modal-body">
+        <ul class="list list-link">
+          <li><a href="">North America</a></li>
+          <li><a href="">Latin America</a></li>
+          <li><a href="">Asia Pacific</a></li>
+          <li><a href="">Europe</a></li>
+          <li><a href="">Mediterranean</a></li>
+          <li><a href="">Middle East</a></li>
+          <li><a href="">Africa</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

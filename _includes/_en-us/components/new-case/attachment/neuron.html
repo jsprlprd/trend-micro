@@ -1,0 +1,55 @@
+<div id="neuron">
+
+  {% include _en-us/components/new-case/attachment/neuron/undetected.html %}
+
+  {% include _en-us/components/new-case/attachment/neuron/infected.html %}
+
+  {% include _en-us/components/new-case/attachment/neuron/files-false-positive.html %}
+
+  {% include _en-us/components/new-case/attachment/neuron/spam.html %}
+
+  <div class="panel panel-default" id="attachment-list">
+    <table class="table table-bordered table-stripped table-hover">
+      <thead>
+        <tr>
+          <th class="col-xs-8">File Name</th>
+          <th class="col-xs-3">File Type</th>
+          <th class="col-xs-1"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>screenshots.zip</td>
+          <td>Supporting File</td>
+          <td class="text-center">
+            <a href=""><i class="fa fa-trash-o"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>password.txt</td>
+          <td>URL Text File</td>
+          <td class="text-center">
+            <a href=""><i class="fa fa-trash-o"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>akeufa23akdu2309akdlcadi32hdfakcakdj.zip</td>
+          <td>Virus and Email File</td>
+          <td class="text-center">
+            <a href=""><i class="fa fa-trash-o"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="neuron-upload-btn">
+    <button class="btn btn-default" id="trend-box-upload" data-loading-text="Uploading File" data-complete-text="Upload More File" type="button" onclick="$(this).button('loading').siblings().prop('disabled', false);">
+      Browse
+    </button>
+    <span class="small text-muted" style="margin-left: 10px;">(File Size Limit: 250 MB)</span>
+  </div>
+
+  <progress value="0" max="100" id="attachment-progress"></progress>
+
+</div>

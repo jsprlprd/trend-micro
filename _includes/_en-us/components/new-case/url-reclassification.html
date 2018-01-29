@@ -1,0 +1,117 @@
+<div id="url-reclassification">
+
+  <fieldset class="form-group form-required">
+    <label class="control-label col-sm-12" style="text-align: left;">Step 1: Verify Current Rating and Classification</label>
+    <div class="col-sm-12">
+      <label class="radio-inline">
+        <input type="radio" name="url-upload-type" value="Upload URL" checked>Upload .txt file
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="url-upload-type" value="Enter URL">Enter up to 10 URLs
+      </label>
+      <hr />
+      <div class="help-block">
+        <ul class="list list-condensed">
+          <li>URLs must separated by a line break (use ENTER key).</li>
+          <li>Domains with symbols are not accepted (except for hypens). e.g. www.user@email.com or ftp://username.ftp.com</li>
+        </ul>
+      </div>
+      <div id="upload-url">
+        <button class="btn btn-default" id="trigger-url-upload">Browse</button>
+        <span class="small text-muted" style="margin-left: 10px;">(Up to 10 URLs)</span>
+      </div>
+      <div id="enter-url">
+        <textarea class="form-control" placeholder="https://trendmicro.com" id="txtArea"></textarea>
+        <div class="help-block">
+          <button class="btn btn-info btn-block-xs" data-loading-text="Updating Data" data-complete-text="Completed" type="button" onclick="$(this).button('loading').siblings().prop('disabled', false);">
+            Show Rating &amp; Classification
+          </button>
+          <button class="btn btn-link btn-block-xs">Clear</button>
+          <span class="pull-right">1 out of 10</span>
+        </div>
+      </div>
+      <input type='file' accept='text/plain' class="hidden" id="url-upload" onchange='openFile(event)'>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group" id="url-table">
+    <label class="control-label col-sm-12" style="text-align: left;">Step 2: Review and Assign New Ratings and Classification</label>
+    <div class="col-sm-12">
+      <div class="help-block"></div>
+      <div class="panel panel-default table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="col-xs-4">URL</th>
+              <th class="col-xs-3">Current Classification and Rating</th>
+              <th class="col-xs-3">New Classifcation</th>
+              <th class="col-xs-2">New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-default-state">
+              <td colspan="4" style="background: transparent;">
+                <h6 class="table-state-title display-7">Your URLs will appear here</h6>
+                <p class="table-state-subtitle text-muted">The current rating/classification for each URL will be displayed for your review</p>
+              </td>
+            </tr>
+            <tr class="table-default-state hide">
+              <td colspan="4" class="loading">
+                <span class="loading-content">Loading Content</span>
+              </td>
+            </tr>
+            <tr class="table-danger-state hide">
+              <td colspan="4">
+                <h6 class="table-state-title display-7">Sorry, we're unable to process your request at the moment.</h6>
+                <p class="table-state-subtitle">There seems to be an internal system error. Please try again later.</p>
+              </td>
+            </tr>
+            <tr class="hide">
+              <td>https://stg-community-trendmicro.cs40.force.com/new-request</td>
+              <td class="Safe">
+                Computers / Internet
+                <div class="small text-muted">Safe</div>
+              </td>
+              <td class="warning"><a href="#url-reclassification-modal" data-toggle="modal" class="btn btn-link btn-block">Select a new classification</a></td>
+              <td class="warning">
+                <select class="form-control input-xs">
+                  <option>Safe</option>
+                  <option>Dangerous</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="hide">
+              <td>https://stg-community-trendmicro.cs40.force.com/new-request</td>
+              <td class="Dangerous">
+                Computers / Internet
+                <div class="small text-muted">Dangerous</div>
+              </td>
+              <td class="warning"><a href="#url-reclassification-modal" data-toggle="modal" class="btn btn-link btn-block">Select a new classification</a></td>
+              <td class="warning">
+                <select class="form-control input-xs">
+                  <option>Safe</option>
+                  <option>Dangerous</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="hide">
+              <td>https://stg-community-trendmicro.cs40.force.com/new-request</td>
+              <td class="Untested">
+                Computers / Internet
+                <div class="small text-muted">Untested</div>
+              </td>
+              <td class="warning"><a href="#url-reclassification-modal" data-toggle="modal" class="btn btn-link btn-block">Select a new classification</a></td>
+              <td class="warning">
+                <select class="form-control input-xs">
+                  <option>Safe</option>
+                  <option>Dangerous</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </fieldset>
+
+</div>

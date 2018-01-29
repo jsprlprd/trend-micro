@@ -1,0 +1,54 @@
+<fieldset class="form-group" id="case-urgency">
+
+  <hr class="dashed">
+
+  <label class="control-label col-sm-3">Case Urgency:</label>
+
+  <div class="col-sm-8">
+
+    <label class="radio-inline" id="low-priority">
+      <input type="radio" name="case-urgency" value="Low Priority" checked />Low
+    </label>
+
+    <label class="radio-inline" id="medium-priority">
+      <input type="radio" name="case-urgency" value="Medium Priority" />Medium
+    </label>
+
+    <div class="popover_content hidden" id="medium-priority-content">
+      <ul class="list list-bullet list-condensed">
+        <li>Major Trend Micro software or service function impaired but operational.</li>
+        <li>Minor Trend Micro product or service component function not working as documented.</li>
+        <li>Medium to low business impact.</li>
+        <li>Workaround available.</li>
+      </ul>
+    </div>
+
+    <label class="radio-inline" id="high-priority">
+      <input type="radio" name="case-urgency" value="High Priority" />High
+    </label>
+
+    <div class="popover_content hidden" id="high-priority-content">
+      <ul class="list list-bullet list-condensed">
+        <li>Issues where major Trend Micro product or service components are rendered inoperable.</li>
+        <li>Critical impact to business operations.</li>
+        <li>No workaround available.</li>
+        <li>Around-the-clock Customer and Trend Micro commitment to address the incident.</li>
+      </ul>
+    </div>
+
+    <label class="radio-inline" id="critical-priority">
+      <input type="radio" name="case-urgency" value="Critical Priority" />Critical
+    </label>
+
+    <div class="popover_content hidden" id="critical-priority-content">
+      <ul class="list list-bullet list-condensed">
+        <li>Issues where major Trend Micro product or service components are rendered inoperable.</li>
+        <li>Critical impact to business operations.</li>
+        <li>No workaround available.</li>
+        <li>Around-the-clock Customer and Trend Micro commitment to address the incident.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</fieldset>

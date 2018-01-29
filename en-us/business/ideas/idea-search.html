@@ -1,0 +1,62 @@
+---
+
+layout: en-ideas
+
+meta-title: Idea Exchange for Business
+
+headingTitle: Idea Exchange
+headingDisplay: display-3
+
+headingImageVisibility:
+headingSubTitleVisibility: none
+headingSubTitleLinkVisibility: none
+
+
+heading-title: <span>Welcome to</span> Business Support
+heading-title-display: 1
+
+heading-subtitle:
+
+heading-subtitle-link-text:
+heading-subtitle-link-url:
+
+heading-image-url:
+
+heading-visibility: hidden-xs hidden-sm
+heading-image-visibility: none
+heading-subtitle-top-visibility: none
+heading-subtitle-bottom-visibility: none
+heading-subtitle-link-visibility: none
+
+---
+
+<ul class="list list-bordered" id="idea-list">
+  {% for post in site.posts %}
+  <li class="media">
+    <div class="media-left" href="">
+      <img class="media-object" src="{{ site.baseurl }}/assets/images/{{ post.idea-avatar }}" />
+      <p class="text-center text-muted text-17" style="margin: 10px 0; line-height: 1;"><strong>{{ post.idea-votes }}</strong><br /><small>Votes</small></p>
+      <button type="button" class="btn btn-positive btn-sm" name="button"><i class="fa fa-thumbs-up"></i></button>
+      <button type="button" class="btn btn-negative btn-sm" name="button"><i class="fa fa-thumbs-down"></i></button>
+    </div>
+    <div class="media-content">
+      <div class="media-heading">
+        <p class="media-subtitle">
+          <span class="published-date">{{ post.idea-date }}</span> - <span class="label label-default"><strong class="text-{{ post.idea-status-type }}">{{ post.idea-status }}</strong></span>
+        </p>
+        <h6 class="media-title display-6"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.idea-title }}</a></h6>
+      </div>
+      <div class="media-body">
+        {{ post.idea-body }}...<a href="{{ post.url }}">see more</a>
+      </div>
+      <div class="media-footer">
+        <ul class="list list-inline">
+          <li>Posted by <a href="">{{ post.idea-author }}</a> to <a href="">{{ post.idea-product }}</a></li>
+          <li class="divider"></li>
+          <li><a href="">Comments</a> {{ post.idea-comments }}</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

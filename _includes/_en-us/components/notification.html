@@ -1,0 +1,49 @@
+<div class="alert alert-{{ page.notification-style }} alert-dismissible" id="global-announcements">
+  <div class="container alert-content">
+    <button class="close" data-dismiss="alert" type="button">&times;</button>
+    <p class="alert-title">
+      <strong>{{ page.notification-title }}</strong>
+    </p>
+    <p>
+      {{ page.notification-body }} <a href="" style="color: inherit; text-decoration: underline;">{{ page.notification-action }}<i class="fa fa-lg fa-left fa-angle-right"></i></a>
+    </p>
+  </div>
+</div>
+
+<!-- <div class="alert alert-{{ page.notification-style }} alert-dismissible" id="global-announcements">
+  <div class="container" style="position: relative; padding-top: 15px; padding-bottom: 15px; padding-right: 50px;">
+    <button class="close" data-dismiss="alert" type="button">&times;</button>
+    <p>
+      <i class="fa fa-lg fa-right {{ page.notification-icon }}"></i><strong>{{ page.notification-title }}</strong> - {{ page.notification-body }} <a href="" style="color: inherit; text-decoration: underline; margin-left: 5px;">{{ page.notification-action }}<i class="fa fa-lg fa-left fa-angle-right"></i></a>
+    </p>
+  </div>
+</div> -->
+
+<style media="screen">
+  #global-announcements {
+    margin: 0;
+    color: #fff;
+    /*line-height: 25px;*/
+    font-size: 15px;
+    border: 0;
+    box-shadow: none;
+  }
+  #global-announcements .alert-content {
+    background: none;
+    margin: 0 auto;
+    position: relative;
+    /*padding-left: 50px;*/
+  }
+  #global-announcements .alert-content::before {
+    display: none;
+  }
+  #global-announcements .alert-content .alert-title {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.25em;
+    opacity: .6;
+  }
+  #global-announcements .close {
+    color: #fff;
+  }
+</style>

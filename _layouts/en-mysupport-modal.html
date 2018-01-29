@@ -1,0 +1,26 @@
+---
+
+layout: en-global
+
+pageCSS: mysupport.css
+
+---
+
+{% include _en-us/components/nav/sub-navigation.html %}
+
+<div class="modal-header">
+  <button class="close" type="button" data-dismiss="modal">&times;</button>
+  <h6 class="modal-title">{{ page.pageTitle }}</h6>
+</div>
+
+<div class="modal-body">
+
+  <main class="container" id="{{ page.pageID }}">
+
+    {% include _en-us/components/heading.html %}
+
+    {{ content }}
+
+  </main>
+
+</div>

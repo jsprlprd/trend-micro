@@ -1,0 +1,108 @@
+<fieldset class="form-group form-required" id="issue-category">
+  <label class="control-label col-sm-3">Issue Category:</label>
+  <div class="col-sm-8 col-md-6 col-lg-5">
+    <select class="form-control" id="product-issue-category">
+      <optgroup label="Product Issues">
+        <option value="Appliance Hardware" selected>Appliance Hardware</option>
+        <option value="Configuration">Configuration</option>
+        <option value="Installation">Installation</option>
+        <option value="Performance">Performance</option>
+        <option value="System Crash">System Crash</option>
+        <option value="Uninstall">Uninstall</option>
+        <option value="Update or Rollback">Update or Rollback</option>
+        <option value="UI or Document">User Interface Defects or Documentation Questions</option>
+        <option value="Product Inquiry">Other Product Related Questions</option>
+      </optgroup>
+      <optgroup label="Activation and Registration Issues">
+        <option value="Account Administration">Account Administration</option>
+        <option value="Licensing and Activation">Licensing and Activation</option>
+      </optgroup>
+    </select>
+    <select class="form-control" id="malware-issue-category">
+      <optgroup label="Virus and Malware Issues">
+        <option value="Undetected" selected>Undetected Threat Sample Analysis</option>
+        <option value="Infected">Infected or Possibly Infected</option>
+        <option value="File False Positive">File False Positive</option>
+        <option value="URL Reclassification">URL Reclassification</option>
+        <option value="Spam">Spam</option>
+        <option value="Spam False Positive">Spam False Positive</option>
+      </optgroup>
+    </select>
+    <select class="form-control" id="tipping-point-issue-category">
+      <optgroup label="Product Issues">
+        <option value="ACF">ACF</option>
+        <option value="CF Card">CF Card</option>
+        <option value="Chassis">Chassis</option>
+        <option value="Client Error">Client Error</option>
+        <option value="Console Interface">Console Interface</option>
+        <option value="Cosmetic/Ship Damage">Cosmetic/Ship Damage</option>
+        <option value="DDOS">DDOS</option>
+        <option value="Device Management">Device Management</option>
+        <option value="DV Distribution">DV Distribution</option>
+        <option value="Fan Failure">Fan Failure</option>
+        <option value="Feature Request">Feature Request</option>
+        <option value="Goodwill Swap">Goodwill Swap</option>
+        <option value="High Availability">High Availability</option>
+        <option value="Interface Errors">Interface Errors</option>
+        <option value="Latency">Latency</option>
+        <option value="LCD Panel">LCD Panel</option>
+        <option value="Management Port Unresponsive">Management Port Unresponsive</option>
+        <option value="Memory">Memory</option>
+        <option value="Not Passing Traffic">Not Passing Traffic</option>
+        <option value="Password Recovery">Password Recovery</option>
+        <option value="Performance Protection">Performance Protection</option>
+        <option value="Power">Power</option>
+        <option value="Profile Distribution">Profile Distribution</option>
+        <option value="PSU Failure">PSU Failure</option>
+        <option value="Rail Kit">Rail Kit</option>
+        <option value="Reboot Loop">Reboot Loop</option>
+        <option value="Suspended Task">Suspended Task</option>
+        <option value="Thermal">Thermal</option>
+        <option value="Will Not Boot">Will Not Boot</option>
+        <option value="Will Not Complete Boot">Will Not Complete Boot</option>
+      </optgroup>
+      <optgroup label="Activation and Registration Issues">
+        <option value="Online Account Administration">Online Account Administration</option>
+        <option value="Buying, Rebates or Refunds">Buying, Rebates or Refunds</option>
+        <option value="License Change Requests">License Change Requests</option>
+        <option value="Renew Product">Renew Product</option>
+        <option value="Request New Registration or Activation Code">Request New Registration or Activation Code</option>
+      </optgroup>
+    </select>
+    <select class="form-control" id="change-control-category" disabled></select>
+    <div class="help-block">
+      <ul class="list list-condensed" id="product-issue-description">
+        <li id="appliance-hardware-description">For hardware-related issues affecting a Trend Micro appliance product (ie. Network Viruswall, Interscan Gateway Security Appliance, Interscan Messaging Appliance, etc.</li>
+        <li id="configuration-description">Issues relating to setting up and enabling a functionality of a product like Realtime scanning, notification, Firewalls, and etc.</li>
+        <li id="installation-description">Problems installing the entire product or a component of a product.</li>
+        <li id="performance-description">Degradation or poor system performance after enabling a function or installing the product.</li>
+        <li id="system-crash-description">Crash, hang, Blue-screen-of-Death (BSOD), ABEND, Core Dump, etc. after installing a component, enabling a feature, or installing the product.</li>
+        <li id="uninstall-description">Problems removing a component or the entire product from the system.</li>
+        <li id="update-rollback-description">Issues related to component updates and rollback such as pattern and scan engine update failures.</li>
+        <li id="user-interface-document-description">Management Console or Client-side console problems and product documentation (Installation Guide, Administrator Guide, or Online Help concerns.</li>
+        <li id="product-inquiry-description">Other technical concerns that do not fall within the above categories.</li>
+        <li id="account-administration-description">Issues on enabling or disabling access to an online account.</li>
+        <li id="licensing-activation-description"></li>
+      </ul>
+      <ul class="list list-condensed" id="malware-issue-description">
+        <li id="undetected-description">
+          <ul class="list list-condensed">
+            <li>Select this issue category if you wish to verify threat samples and know if it is malicious.</li>
+            <li>It could be files, email, or URL/websites.</li>
+            <li>If you are already infected by a virus or experience possible infection behavior, please select the Possible Infection issue category.</li>
+          </ul>
+        </li>
+        <li id="infected-description">Select this issue category if infected by a virus or experience possible infection behavior.</li>
+        <li id="file-false-positive-description">Report that a clean file was detected as malicious.</li>
+        <li id="url-reclassification-description">
+          <ul class="list list-condensed">
+            <li>Request to update the categories and/or rating of websites/URLs.</li>
+            <li>If you would like to reference the categories or ratings of particular website/URLs, please select the Undetected Threat Sample Analysis Sample issue category.</li>
+          </ul>
+        </li>
+        <li id="spam-description">Request to tag an email as SPAM.</li>
+        <li id="spam-false-positive-description">Request to analyze a valid email tagged as SPAM</li>
+      </ul>
+    </div>
+  </div>
+</fieldset>

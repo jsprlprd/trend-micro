@@ -1,0 +1,162 @@
+<div class="modal fade" id="all-products">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="product-profile">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="contact-region">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title">Choose your Region</h6>
+        <p class="modal-subtitle">Selecting a region changes the language and/or content.</p>
+      </div>
+      <div class="modal-body">
+        <ul class="list list-links">
+          <li><a href="{{ site.baseurl }}/ja-jp/contact-support/asia-pacific.html">Asia Pacific</a></li>
+          <li><a href="{{ site.baseurl }}/ja-jp/contact-support/europe.html">Europe</a></li>
+          <li><a href="{{ site.baseurl }}/ja-jp/contact-support/latin-america.html">Latin America</a></li>
+          <li><a href="{{ site.baseurl }}/ja-jp/contact-support/mediterranean-middle-east-and-africa.html">Mediterranean, Middle East &amp; Africa</a></li>
+          <li><a href="{{ site.baseurl }}/ja-jp/contact-support/north-america.html">North Amercica</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="select-region">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title">Choose your Region</h6>
+        <p class="modal-subtitle">Selecting a region changes the language and/or content.</p>
+      </div>
+      <div class="modal-body">
+        <ul class="list list-links" id="all-region">
+          <li><a id="show-asia-pacific">Asia Pacific</a></li>
+          <li><a id="show-europe">Europe</a></li>
+          <li><a href="{{ site.baseurl }}/en-us/business-support.html">Latin America</a></li>
+          <li><a href="{{ site.baseurl }}/en-us/business-support.html">Mediterranean, Middle East &amp; Africa</a></li>
+          <li><a href="{{ site.baseurl }}/en-us/business-support.html">North Amercica</a></li>
+        </ul>
+        <div id="asia-pacific-country" style="display:none;">
+          <h6><span class="back-to-region" style="font-size: 14px; width: 24px; height: 24px; display: inline-block; text-align: center; line-height: 24px; margin-right: 15px;"><i class="fa fa-chevron-left"></i></span>Asia Pacific</h6>
+          <ul class="list list-links list-indent">
+            <li><a href="{{ site.baseurl }}/ja-jp/business-support.html">Japan</a></li>
+            <li><a href="{{ site.baseurl }}/en-us/business-support.html">Rest of APAC</a></li>
+          </ul>
+        </div>
+        <div id="europe-country" style="display:none;">
+          <h6><span class="back-to-region" style="font-size: 14px; width: 24px; height: 24px; display: inline-block; text-align: center; line-height: 24px; margin-right: 15px;"><i class="fa fa-chevron-left"></i></span>Europe</h6>
+          <ul class="list list-links list-indent list-columns two-columns">
+            <li><a href="">France</a></li>
+            <li><a href="">Germany</a></li>
+            <li><a href="">Italy</a></li>
+            <li><a href="">Spain</a></li>
+            <li><a href="">United Kingdom</a></li>
+            <li><a href="">Rest of EMEA</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ie-region">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title">Internet Explorer is detected!</h6>
+      </div>
+      <div class="modal-body">
+        <p>
+          For otimal experience, we recommend using <a href="https://www.google.com/chrome/browser/desktop/" target="_blank">Chrome</a> or <a href="https://www.mozilla.org/ja-jp/firefox/new/" target="_blank">Firefox</a>.
+        </p>
+        <p>
+          If you still wish to proceed with IE, please complete setting the following <a href="{{ site.baseurl }}/ja-jp/user-guide/internet-explorer-security-configuration.html" target="_blank">IE Security Configurations</a> and select your region:
+        </p>
+        <br />
+        <label class="control-label">Select your Region:</label>
+        <select class="form-control">
+          <option>Asia Pacific</option>
+          <optgroup label="Europe">
+            <option>France</option>
+            <option>Germany</option>
+            <option>Italy</option>
+            <option>Russia</option>
+            <option>Spain</option>
+            <option>Rest of EMEA</option>
+          </optgroup>
+          <option>Latin America</option>
+          <option>Mediterranean, Middle East &amp; Africa</option>
+          <option>North America</option>
+        </select>
+        <div class="help-block">
+          This website uses cookies to save your regional preference
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="" class="btn btn-primary btn-sm">Continue to Business Support</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="update-browser">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h6>Improve Your Experience</h6>
+        <p>
+          This web browser isn't supported for our site. Try one of the options below for optimal experience.
+        </p>
+        <ul class="list list-columns three-columns list-bordered text-center" id="browser-compatibility">
+          <li>
+            <img src="/assets/images/browser-chrome.png" width="75px">
+            <a href="">Google Chorme</a>
+          </li>
+          <li>
+            <img src="/assets/images/browser-firefox.png" width="75px">
+            <a href="">Mozilla Firefox</a>
+          </li>
+          <li>
+            <img src="/assets/images/browser-explorer.png" width="75px">
+            <a href="">Internet Explorer 11</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="support-region">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h6 class="modal-title">Support Region didn't match</h6>
+      </div>
+      <div class="modal-body">
+        <p>
+          We detected that your preferred support region is different from your GeoIP.
+        </p>
+        <p>
+          If you would like to update your preferred support region, please click here or update your support region in My Profile.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="" class="btn btn-positive">Yes, change my view to my support region</a>
+        <a href="" class="btn btn-negative">No, ignore for now</a>
+      </div>
+    </div>
+  </div>
+</div>

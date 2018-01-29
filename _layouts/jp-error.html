@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% include _ja-jp/global/meta-data.html %}
+    <title>{{ page.metaTitle }} | Trend Micro</title>
+    {% include _ja-jp/global/favicon.html %}
+    {% include _ja-jp/global/stylesheet.html %}
+
+  </head>
+
+  <body style="margin-top: 75px; margin-bottom: 100px;">
+
+    <span style="{% if page.url contains '/ja-jp/tls-error.html' %} display: none; {% endif %}">
+      {% include _ja-jp/components/header.html %}
+    </span>
+
+    <main class="container" id="{{ page.pageID }}">
+
+      {% include _ja-jp/components/heading.html %}
+
+      {{ content }}
+
+    </main>
+
+    {% include _ja-jp/footer-local.html %}
+
+  </body>
+
+</html>
