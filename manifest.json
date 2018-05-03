@@ -1,0 +1,7 @@
+{
+  "name": "Trend Micro | Business Support",
+  "short_name": "eSupport",
+  "start_url": "https://jsprlprd.github.io/trend-micro/en-us/business/",
+  "display": "standalone",
+  "background_color": "#DB3D44",
+}
